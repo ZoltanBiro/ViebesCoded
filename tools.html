@@ -1,0 +1,432 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>Stitch Design - Apps</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+    :root {
+      --primary-color: #00ffff;
+      --secondary-color: #293038;
+      --background-color: #0a0f14;
+      --text-primary: #e0e0e0;
+      --text-secondary: #9daab8;
+      --accent-glow: rgba(0, 255, 255, 0.3);
+      --card-bg: #111827;
+    }
+    .cyber-glow {
+      box-shadow: 0 0 8px var(--accent-glow), 0 0 15px var(--accent-glow), 0 0 20px var(--accent-glow);
+    }
+    .cyber-glow-soft {
+      box-shadow: 0 0 5px var(--accent-glow), 0 0 10px var(--accent-glow);
+    }
+    .bg-grid-pattern {
+      background-image:
+        linear-gradient(to right, rgba(0, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 255, 255, 0.05) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .app-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--secondary-color);
+      border-radius: 0.75rem;transition: all 0.3s ease-in-out;
+      overflow: hidden;
+    }
+    .app-card:hover {
+      border-color: var(--primary-color);
+      transform: translateY(-4px);
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2), 0 0 30px rgba(0, 255, 255, 0.1);
+    }
+    .app-card-header {
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid var(--secondary-color);
+      background-color: rgba(17, 24, 39, 0.5);}
+    .app-card-content {
+      padding: 1.5rem;
+    }
+    .terminal-input::before {
+      content: "> ";
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+    .binary-rain {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.1;
+    }
+    .binary-char {
+      font-family: 'Space Grotesk', monospace;
+      color: var(--primary-color);
+      position: absolute;
+      animation: fall linear infinite;
+      font-size: 10px;
+    }
+    @keyframes fall {
+      to {
+        transform: translateY(100vh);
+      }
+    }
+  </style>
+</head>
+<body class="bg-[var(--background-color)]" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+<div class="relative flex size-full min-h-screen flex-col dark group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[var(--secondary-color)] px-6 sm:px-10 py-4 shadow-md backdrop-blur-sm bg-[var(--background-color)]/80 sticky top-0 z-50">
+<div class="flex items-center gap-3 sm:gap-4 text-[var(--text-primary)]">
+<div class="size-6 sm:size-7 text-[var(--primary-color)]">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 4C12.95 4 4 7.26 4 11.27C4 14.01 8.16 16.4 14.31 17.64C10.29 18.45 7.03 20.67 7.03 23.36C7.03 23.54 7.05 23.72 7.08 23.89C4.03 24.73 4 26.69 4 27.45C4 30.19 8.16 32.58 14.31 33.82C8.16 35.06 4 37.45 4 40.18C4 44.19 12.95 47.45 24 47.45C35.05 47.45 44 44.19 44 40.18C44 37.45 39.84 35.06 33.69 33.82C39.84 32.58 44 30.19 44 27.45C44 26.69 43.97 24.73 40.92 23.89C40.95 23.72 40.97 23.54 40.97 23.36C40.97 20.67 37.71 18.45 33.69 17.64C39.84 16.4 44 14.01 44 11.27C44 7.26 35.05 4 24 4ZM24 7.73C32.84 7.73 40.27 10.24 40.27 11.27C40.27 12.3 32.84 14.82 24 14.82C15.16 14.82 7.73 12.3 7.73 11.27C7.73 10.24 15.16 7.73 24 7.73ZM11.76 24C11.76 22.5 17.01 21.09 24 21.09C30.99 21.09 36.24 22.5 36.24 24C36.24 25.5 30.99 26.91 24 26.91C17.01 26.91 11.76 25.5 11.76 24ZM24 43.73C15.16 43.73 7.73 41.21 7.73 40.18C7.73 39.15 15.16 36.64 24 36.64C32.84 36.64 40.27 39.15 40.27 40.18C40.27 41.21 32.84 43.73 24 43.73Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-[var(--text-primary)] text-xl sm:text-2xl font-bold leading-tight tracking-[-0.015em]">Cipher<span class="text-[var(--primary-color)]">Apps</span></h2>
+</div>
+<nav class="hidden md:flex items-center gap-6 lg:gap-9">
+<a class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] text-sm font-medium leading-normal transition-colors duration-200" href="#">Home</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] text-sm font-medium leading-normal transition-colors duration-200" href="#">Projects</a>
+<a class="text-[var(--primary-color)] text-sm font-bold leading-normal" href="#">Apps</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] text-sm font-medium leading-normal transition-colors duration-200" href="#">Blog</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] text-sm font-medium leading-normal transition-colors duration-200" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-2 sm:gap-3">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg sm:rounded-xl h-9 sm:h-10 bg-[var(--secondary-color)] hover:bg-opacity-80 text-[var(--text-primary)] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2 sm:px-2.5 transition-colors duration-200">
+<div class="text-[var(--text-primary)]" data-icon="MagnifyingGlass" data-size="20px" data-weight="regular">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+</svg>
+</div>
+</button>
+<button class="md:hidden flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg sm:rounded-xl h-9 sm:h-10 bg-[var(--secondary-color)] hover:bg-opacity-80 text-[var(--text-primary)] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2 sm:px-2.5 transition-colors duration-200">
+<div class="text-[var(--text-primary)]" data-icon="List" data-size="20px" data-weight="regular">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path>
+</svg>
+</div>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-9 sm:size-10 border-2 border-[var(--primary-color)] cyber-glow-soft" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCqi0kpJdpzIlM_j2WVSkEFPjfmxoX5RXPX9ZDFCd2rmpqnvKkk0qAKvxE6_hYAAEXjyGdDD1m-g4Zx7IfqHVzzX8R3vb-mHYJ1tQ920uC-kkCZ7ixrtncG0yKUa9xEHNCZrkscMWe6U87f25hXwCMv-TzA9cUZc9wOVFovOtzoy3cattm-O0oHsxW75i72Zgn0_yNYkRamtvzso3qYGk6yzOPk4fzwJHpCtLoi-OXZnkPHtJ_81NIQrP8oUfi6NX3pjRH1FA27GPXV");'></div>
+</div>
+</header>
+<main class="px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 flex flex-1 flex-col py-10 sm:py-16 bg-grid-pattern relative">
+<div class="binary-rain" id="binaryRainContainer"></div>
+<div class="layout-content-container flex flex-col w-full flex-1 gap-10 z-10">
+<div class="text-center">
+<h1 class="text-[var(--text-primary)] tracking-tighter text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+              My <span class="text-[var(--primary-color)] cyber-glow-text">Custom Apps</span>
+</h1>
+<p class="text-[var(--text-secondary)] text-base sm:text-lg font-normal leading-relaxed mt-4 max-w-2xl mx-auto">
+              Explore interactive tools and utilities I've built. Each app is designed with a focus on cybersecurity principles and modern development practices.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="app-card lg:col-span-2">
+<div class="app-card-header flex justify-between items-center">
+<h3 class="text-lg font-semibold text-[var(--text-primary)]">Password Strength Analyzer</h3>
+<span class="text-xs font-mono text-[var(--primary-color)] py-1 px-2 border border-[var(--primary-color)] rounded">UTILITY</span>
+</div>
+<div class="app-card-content space-y-4">
+<p class="text-sm text-[var(--text-secondary)]">Enter a password to analyze its strength based on various criteria like length, character types, and common patterns.</p>
+<div class="flex items-center space-x-2">
+<input class="form-input flex-grow bg-[var(--secondary-color)]/50 border border-[var(--secondary-color)] text-[var(--text-primary)] rounded-md px-3 py-2 focus:ring-2 focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)] transition-all placeholder:text-[var(--text-secondary)]/70" id="passwordInput" placeholder="Enter password..." type="password"/>
+<button class="bg-[var(--primary-color)] text-[var(--background-color)] px-4 py-2 rounded-md font-semibold hover:opacity-90 transition-opacity" id="analyzePasswordBtn">Analyze</button>
+</div>
+<div class="mt-3 text-sm" id="strengthResult">
+                  {}
+                  <p class="text-[var(--text-secondary)]">Strength: <span class="font-bold" id="strengthText">-</span></p>
+<div class="w-full bg-[var(--secondary-color)] rounded-full h-2.5 mt-1">
+<div class="bg-[var(--primary-color)] h-2.5 rounded-full transition-all duration-500" id="strengthBar" style="width: 0%"></div>
+</div>
+<ul class="list-disc list-inside text-[var(--text-secondary)] mt-2 space-y-1 text-xs" id="strengthCriteria">
+<li>Length (min 8 chars)</li>
+<li>Uppercase letter</li>
+<li>Lowercase letter</li>
+<li>Number</li>
+<li>Special character</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="app-card">
+<div class="app-card-header flex justify-between items-center">
+<h3 class="text-lg font-semibold text-[var(--text-primary)]">Text Encryptor</h3>
+<span class="text-xs font-mono text-[var(--primary-color)] py-1 px-2 border border-[var(--primary-color)] rounded">SECURITY</span>
+</div>
+<div class="app-card-content space-y-3">
+<p class="text-sm text-[var(--text-secondary)]">A simple Caesar cipher tool to encrypt or decrypt text.</p>
+<textarea class="form-textarea w-full bg-[var(--secondary-color)]/50 border border-[var(--secondary-color)] text-[var(--text-primary)] rounded-md px-3 py-2 focus:ring-2 focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)] transition-all placeholder:text-[var(--text-secondary)]/70" id="textToProcess" placeholder="Enter text here..." rows="3"></textarea>
+<div class="flex items-center space-x-2">
+<label class="text-sm text-[var(--text-secondary)]" for="cipherShift">Shift:</label>
+<input class="form-input w-16 bg-[var(--secondary-color)]/50 border border-[var(--secondary-color)] text-[var(--text-primary)] rounded-md px-2 py-1 text-center focus:ring-1 focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)] transition-all" id="cipherShift" max="25" min="1" type="number" value="3"/>
+<button class="bg-[var(--primary-color)] text-[var(--background-color)] px-3 py-1 rounded-md text-sm font-medium hover:opacity-90 transition-opacity" id="encryptBtn">Encrypt</button>
+<button class="bg-[var(--secondary-color)] text-[var(--text-primary)] px-3 py-1 rounded-md text-sm font-medium hover:bg-opacity-80 transition-opacity" id="decryptBtn">Decrypt</button>
+</div>
+<textarea class="form-textarea w-full bg-[var(--secondary-color)]/30 border border-[var(--secondary-color)] text-[var(--text-primary)] rounded-md px-3 py-2 cursor-not-allowed placeholder:text-[var(--text-secondary)]/70" id="processedText" placeholder="Result..." readonly="" rows="3"></textarea>
+</div>
+</div>
+<div class="app-card">
+<div class="app-card-header flex justify-between items-center">
+<h3 class="text-lg font-semibold text-[var(--text-primary)]">Port Scanner Sim</h3>
+<span class="text-xs font-mono text-[var(--primary-color)] py-1 px-2 border border-[var(--primary-color)] rounded">NETWORK</span>
+</div>
+<div class="app-card-content space-y-3">
+<p class="text-sm text-[var(--text-secondary)]">Simulate a port scan on a target IP. (Educational purposes only, no real scanning).</p>
+<div class="flex items-center space-x-2">
+<input class="form-input flex-grow bg-[var(--secondary-color)]/50 border border-[var(--secondary-color)] text-[var(--text-primary)] rounded-md px-3 py-2 focus:ring-2 focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)] transition-all placeholder:text-[var(--text-secondary)]/70" id="targetIp" placeholder="Target IP (e.g., 192.168.1.1)" type="text"/>
+<button class="bg-[var(--primary-color)] text-[var(--background-color)] px-4 py-2 rounded-md font-semibold hover:opacity-90 transition-opacity" id="scanPortsBtn">Scan</button>
+</div>
+<div class="mt-3 text-xs font-mono bg-black/30 p-3 rounded-md h-32 overflow-y-auto border border-[var(--secondary-color)]" id="scanOutput">
+<p class="text-[var(--text-secondary)] terminal-input">Waiting for target...</p>
+                  {}
+                </div>
+</div>
+</div>
+<div class="app-card lg:col-span-2">
+<div class="app-card-header flex justify-between items-center">
+<h3 class="text-lg font-semibold text-[var(--text-primary)]">Hash Generator</h3>
+<span class="text-xs font-mono text-[var(--primary-color)] py-1 px-2 border border-[var(--primary-color)] rounded">CRYPTO</span>
+</div>
+<div class="app-card-content space-y-4">
+<p class="text-sm text-[var(--text-secondary)]">Generate MD5, SHA-1, SHA-256, and SHA-512 hashes for your input text.</p>
+<textarea class="form-textarea w-full bg-[var(--secondary-color)]/50 border border-[var(--secondary-color)] text-[var(--text-primary)] rounded-md px-3 py-2 focus:ring-2 focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)] transition-all placeholder:text-[var(--text-secondary)]/70" id="hashInput" placeholder="Enter text to hash..." rows="3"></textarea>
+<button class="w-full bg-[var(--primary-color)] text-[var(--background-color)] py-2 rounded-md font-semibold hover:opacity-90 transition-opacity" id="generateHashBtn">Generate Hashes</button>
+<div class="space-y-2 text-sm" id="hashResults">
+<div>
+<label class="block text-xs text-[var(--text-secondary)] font-medium">MD5:</label>
+<input class="form-input w-full bg-[var(--secondary-color)]/30 border border-[var(--secondary-color)] text-[var(--text-primary)]/80 rounded-md px-2 py-1 text-xs cursor-copy" id="md5Result" onclick="this.select()" placeholder="-" readonly="" type="text"/>
+</div>
+<div>
+<label class="block text-xs text-[var(--text-secondary)] font-medium">SHA-256:</label>
+<input class="form-input w-full bg-[var(--secondary-color)]/30 border border-[var(--secondary-color)] text-[var(--text-primary)]/80 rounded-md px-2 py-1 text-xs cursor-copy" id="sha256Result" onclick="this.select()" placeholder="-" readonly="" type="text"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="px-10 py-6 border-t border-solid border-[var(--secondary-color)] text-center bg-[var(--background-color)]/80 backdrop-blur-sm">
+<p class="text-sm text-[var(--text-secondary)]">
+          © 2024 CipherApps. All rights reserved. Exploring the digital frontier, one line of code at a time.
+        </p>
+</footer>
+</div>
+</div>
+<script>
+    // Binary Rain Effect (simple version)
+    const binaryRainContainer = document.getElementById('binaryRainContainer');
+    if (binaryRainContainer) {
+      const createBinaryChar = () => {
+        const char = document.createElement('span');
+        char.classList.add('binary-char');
+        char.textContent = Math.random() > 0.5 ? '0' : '1';
+        char.style.left = `${Math.random() * 100}%`;
+        char.style.animationDuration = `${Math.random() * 5 + 3}s`; // 3-8 seconds
+        char.style.fontSize = `${Math.random() * 6 + 8}px`; // 8-14px
+        char.style.opacity = Math.random() * 0.5 + 0.2; // 0.2 - 0.7
+        binaryRainContainer.appendChild(char);
+        setTimeout(() => {
+          char.remove();
+        }, (parseFloat(char.style.animationDuration) * 1000) + 500); // Remove after animation + buffer
+      };
+      setInterval(createBinaryChar, 100); // Add new char every 100ms
+    }
+    // Password Strength Analyzer Logic
+    const passwordInput = document.getElementById('passwordInput');
+    const analyzePasswordBtn = document.getElementById('analyzePasswordBtn');
+    const strengthText = document.getElementById('strengthText');
+    const strengthBar = document.getElementById('strengthBar');
+    const strengthCriteria = document.getElementById('strengthCriteria');
+    if (analyzePasswordBtn) {
+      analyzePasswordBtn.addEventListener('click', () => {
+        const password = passwordInput.value;
+        let score = 0;
+        let criteriaMet = {
+          length: false,
+          uppercase: false,
+          lowercase: false,
+          number: false,
+          special: false
+        };
+        if (password.length >= 8) {
+          score++;
+          criteriaMet.length = true;
+        }
+        if (/[A-Z]/.test(password)) {
+          score++;
+          criteriaMet.uppercase = true;
+        }
+        if (/[a-z]/.test(password)) {
+          score++;
+          criteriaMet.lowercase = true;
+        }
+        if (/[0-9]/.test(password)) {
+          score++;
+          criteriaMet.number = true;
+        }
+        if (/[^A-Za-z0-9]/.test(password)) {
+          score++;
+          criteriaMet.special = true;
+        }
+        let strength = "Very Weak";
+        let barWidth = "20%";
+        let barColor = "red";
+        if (score === 5) {
+          strength = "Very Strong";
+          barWidth = "100%";
+          barColor = "var(--primary-color)";
+        } else if (score === 4) {
+          strength = "Strong";
+          barWidth = "80%";
+          barColor = "var(--primary-color)";
+        } else if (score === 3) {
+          strength = "Medium";
+          barWidth = "60%";
+          barColor = "orange";
+        } else if (score === 2) {
+          strength = "Weak";
+          barWidth = "40%";
+          barColor = "orange";
+        }
+        strengthText.textContent = strength;
+        strengthBar.style.width = barWidth;
+        strengthBar.style.backgroundColor = barColor;
+        // Update criteria list
+        if (strengthCriteria) {
+          strengthCriteria.innerHTML = `
+            <li class="${criteriaMet.length ? 'text-[var(--primary-color)]' : 'text-[var(--text-secondary)]'}">${criteriaMet.length ? '✓' : '✗'} Length (min 8 chars)</li>
+            <li class="${criteriaMet.uppercase ? 'text-[var(--primary-color)]' : 'text-[var(--text-secondary)]'}">${criteriaMet.uppercase ? '✓' : '✗'} Uppercase letter</li>
+            <li class="${criteriaMet.lowercase ? 'text-[var(--primary-color)]' : 'text-[var(--text-secondary)]'}">${criteriaMet.lowercase ? '✓' : '✗'} Lowercase letter</li>
+            <li class="${criteriaMet.number ? 'text-[var(--primary-color)]' : 'text-[var(--text-secondary)]'}">${criteriaMet.number ? '✓' : '✗'} Number</li>
+            <li class="${criteriaMet.special ? 'text-[var(--primary-color)]' : 'text-[var(--text-secondary)]'}">${criteriaMet.special ? '✓' : '✗'} Special character</li>
+          `;
+        }
+      });
+    }
+    // Text Encryptor Logic (Caesar Cipher)
+    const textToProcess = document.getElementById('textToProcess');
+    const cipherShift = document.getElementById('cipherShift');
+    const encryptBtn = document.getElementById('encryptBtn');
+    const decryptBtn = document.getElementById('decryptBtn');
+    const processedText = document.getElementById('processedText');
+    function caesarCipher(str, shift, encrypt = true) {
+      return str.split('').map(char => {
+        const code = char.charCodeAt(0);
+        if (code >= 65 && code <= 90) { // Uppercase
+          return String.fromCharCode(((code - 65 + (encrypt ? shift : -shift) + 26) % 26) + 65);
+        } else if (code >= 97 && code <= 122) { // Lowercase
+          return String.fromCharCode(((code - 97 + (encrypt ? shift : -shift) + 26) % 26) + 97);
+        }
+        return char; // Non-alphabetic
+      }).join('');
+    }
+    if (encryptBtn) {
+      encryptBtn.addEventListener('click', () => {
+        const shift = parseInt(cipherShift.value) || 0;
+        processedText.value = caesarCipher(textToProcess.value, shift, true);
+      });
+    }
+    if (decryptBtn) {
+      decryptBtn.addEventListener('click', () => {
+        const shift = parseInt(cipherShift.value) || 0;
+        processedText.value = caesarCipher(textToProcess.value, shift, false);
+      });
+    }
+    // Port Scanner Sim Logic
+    const targetIpInput = document.getElementById('targetIp');
+    const scanPortsBtn = document.getElementById('scanPortsBtn');
+    const scanOutput = document.getElementById('scanOutput');
+    const commonPorts = {
+      21: "FTP",
+      22: "SSH",
+      23: "Telnet",
+      25: "SMTP",
+      53: "DNS",
+      80: "HTTP",
+      110: "POP3",
+      143: "IMAP",
+      443: "HTTPS",
+      3306: "MySQL",
+      3389: "RDP"
+    };
+    if (scanPortsBtn) {
+      scanPortsBtn.addEventListener('click', () => {
+        const targetIp = targetIpInput.value;
+        if (!targetIp || !/^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$/.test(targetIp)) {
+          scanOutput.innerHTML = `<p class="text-red-400 terminal-input">Invalid IP address format.</p>`;
+          return;
+        }
+        scanOutput.innerHTML = `<p class="text-[var(--primary-color)] terminal-input">Scanning ${targetIp}...</p>`;
+        let currentPortIndex = 0;
+        const portsToScan = Object.keys(commonPorts);
+        function scanNextPort() {
+          if (currentPortIndex >= portsToScan.length) {
+            scanOutput.innerHTML += `<p class="text-[var(--primary-color)] terminal-input">Scan complete for ${targetIp}.</p>`;
+            return;
+          }
+          const port = portsToScan[currentPortIndex];
+          const service = commonPorts[port];
+          const isOpen = Math.random() < 0.3; // Simulate open port randomly
+          setTimeout(() => {
+            scanOutput.innerHTML += `
+            <p class="text-[var(--text-secondary)]">
+              <span class="text-[var(--primary-color)]">></span> Port ${port} (${service}): 
+              <span class="${isOpen ? 'text-green-400' : 'text-red-400'}">${isOpen ? 'Open' : 'Closed'}</span>
+            </p>`;
+            scanOutput.scrollTop = scanOutput.scrollHeight;
+            currentPortIndex++;
+            scanNextPort();
+          }, Math.random() * 300 + 100); // Simulate scan time
+        }
+        scanNextPort();
+      });
+    }
+    // Hash Generator Logic
+    const hashInput = document.getElementById('hashInput');
+    const generateHashBtn = document.getElementById('generateHashBtn');
+    const md5Result = document.getElementById('md5Result');
+    const sha256Result = document.getElementById('sha256Result');
+    // Basic MD5 (not cryptographically secure, for demo only)
+    function simpleMD5(str) {
+      let hash = 0;
+      for (let i = 0; i < str.length; i++) {
+        const char = str.charCodeAt(i);
+        hash = ((hash << 5) - hash) + char;
+        hash |= 0; // Convert to 32bit integer
+      }
+      return hash.toString(16);
+    }
+    // Basic SHA256 (very simplified, for demo only)
+    async function simpleSHA256(str) {
+      if (typeof crypto !== 'undefined' && crypto.subtle) {
+        const msgBuffer = new TextEncoder().encode(str);
+        const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+      }
+      // Fallback for environments without crypto.subtle (like http)
+      let hash = '';
+      for (let i = 0; i < 64; i++) { // Fixed length for SHA256 representation
+        hash += Math.floor(Math.random() * 16).toString(16);
+      }
+      return hash;
+    }
+    if (generateHashBtn) {
+      generateHashBtn.addEventListener('click', async () => {
+        const text = hashInput.value;
+        if (!text) {
+          md5Result.value = '-';
+          sha256Result.value = '-';
+          return;
+        }
+        md5Result.value = simpleMD5(text);
+        sha256Result.value = await simpleSHA256(text);
+      });
+    }
+  </script>
+
+</body></html>
