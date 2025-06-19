@@ -1,0 +1,181 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>Alex's Portfolio - Projects</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #1978e5;
+        --secondary-color: #293038;
+        --accent-color: #00ff99;--text-primary: #ffffff;
+        --text-secondary: #9daab8;
+        --bg-primary: #111418;
+        --bg-secondary: #1a1f25;
+      }
+      .cyber-glow {
+        box-shadow: 0 0 5px var(--accent-color), 0 0 10px var(--accent-color), 0 0 15px var(--accent-color);
+      }
+      .cyber-border {
+        border-color: var(--accent-color);
+      }
+      .bento-item {
+        background-color: var(--bg-secondary);
+        border: 1px solid var(--secondary-color);
+        transition: all 0.3s ease-in-out;
+      }
+      .bento-item:hover {
+        transform: translateY(-4px) scale(1.02);
+        box-shadow: 0 10px 20px rgba(0, 255, 153, 0.1), 0 0 15px var(--accent-color);
+        border-color: var(--accent-color);
+      }
+      .link-hover:hover {
+        color: var(--accent-color);
+        text-decoration: underline;
+        text-decoration-color: var(--accent-color);
+      }
+    </style>
+</head>
+<body class="antialiased">
+<div class="relative flex size-full min-h-screen flex-col bg-[var(--bg-primary)] dark group/design-root overflow-x-hidden" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+<div class="layout-container flex h-full grow flex-col">
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[var(--secondary-color)] bg-[var(--bg-primary)]/80 px-6 sm:px-10 py-4 backdrop-blur-md">
+<div class="flex items-center gap-4 text-[var(--text-primary)]">
+<div class="size-6 text-[var(--accent-color)]">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_330)">
+<path clip-rule="evenodd" d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clipPath id="clip0_6_330"><rect fill="white" height="48" width="48"></rect></clipPath>
+</defs>
+</svg>
+</div>
+<h2 class="text-[var(--text-primary)] text-xl font-bold leading-tight tracking-[-0.015em]">Alex's Portfolio</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-[var(--text-secondary)] hover:text-[var(--accent-color)] text-sm font-medium leading-normal transition-colors" href="#">About</a>
+<a class="text-[var(--accent-color)] text-sm font-medium leading-normal" href="#">Projects</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--accent-color)] text-sm font-medium leading-normal transition-colors" href="#">Blog</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--accent-color)] text-sm font-medium leading-normal transition-colors" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-3">
+<a aria-label="GitHub Profile" class="flex items-center justify-center rounded-lg h-9 w-9 bg-[var(--secondary-color)] text-[var(--text-primary)] hover:bg-[var(--primary-color)] hover:text-white transition-colors" href="#">
+<div class="text-white" data-icon="GithubLogo" data-size="20px" data-weight="regular">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"></path>
+</svg>
+</div>
+</a>
+<a aria-label="LinkedIn Profile" class="flex items-center justify-center rounded-lg h-9 w-9 bg-[var(--secondary-color)] text-[var(--text-primary)] hover:bg-[var(--primary-color)] hover:text-white transition-colors" href="#">
+<div class="text-white" data-icon="LinkedinLogo" data-size="20px" data-weight="regular">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path>
+</svg>
+</div>
+</a>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[var(--accent-color)] cyber-glow" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDscdLp6qv5jph2dNeIZGfF5ylPflLg4FE1na1smfmBBlw8RRCo3Q7Ii5Wq-KGAFVcTrzjWCNsQ67Yc7k8URsahLHNzBRHLJBpNniFwgOF7Mxltgu0J7JciDc0shIXOCeUROkH5Ct-dA7hiRCu6IDt8Nb6NYEaogL3f-0znFGv1PAboQH--bR0_BLMQwFmGHbcRXRgT6WMVmNQNx9jl8BjEbkPrxb_vPc8qPJcAZZqVBskdP77ZgpDq7wGsUz6kLmmKFdoE_RScycBu");'></div>
+<button class="md:hidden text-[var(--text-primary)]">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,88H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path>
+</svg>
+</button>
+</div>
+</header>
+<main class="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 flex flex-1 justify-center py-10">
+<div class="layout-content-container flex flex-col w-full max-w-6xl flex-1">
+<div class="flex flex-col items-center text-center gap-3 p-4 mb-8">
+<h1 class="text-[var(--text-primary)] tracking-tight text-4xl md:text-5xl font-bold leading-tight">
+                My Digital <span class="text-[var(--accent-color)]">Creations</span>
+</h1>
+<p class="text-[var(--text-secondary)] text-base md:text-lg font-normal leading-normal max-w-2xl">
+                Explore a collection of my personal projects, showcasing my skills and interests in computer science, with a focus on cybersecurity applications and development.
+              </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+<div class="bento-item rounded-xl overflow-hidden flex flex-col group">
+<div class="relative aspect-[16/10] w-full overflow-hidden">
+<img alt="Secure Messaging App Screenshot" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChNIwstK5SsHmAllllLd_9H5zIpGMGrL44DgU9oNPM18QCGKoSn_8y-HQPVmCZSOdcJZmibL657EIvTEu5H_PFGP3CijBsGXa43QiWlrghmwonLoOiVRNdDA0jNVLoqlzKOaM2cNRs10k_YNhFkRuuOJKxs8nAt4gjpKBcigSPbzr__T4LAl9vhNtz4IeYw9KMb_7qr-ojhxdyK7DLaKwmCJYkHfCry1XJBafq6eWMAndrIYjvVTVhWOvUC8FoL_KBkpSKRqsvcfSy"/>
+<div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors"></div>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<h3 class="text-[var(--text-primary)] text-lg font-semibold leading-normal mb-1">Secure Messaging App</h3>
+<p class="text-[var(--text-secondary)] text-sm font-normal leading-relaxed mb-3 flex-grow">
+                    A robust messaging application ensuring privacy with end-to-end encryption. Built with modern security protocols for confidential communication.
+                  </p>
+<div class="flex gap-3 mt-auto">
+<a class="text-xs font-medium text-[var(--accent-color)] hover:underline link-hover" href="#">View Demo</a>
+<a class="text-xs font-medium text-[var(--accent-color)] hover:underline link-hover" href="#">Source Code</a>
+</div>
+</div>
+</div>
+<div class="bento-item rounded-xl overflow-hidden flex flex-col group lg:col-span-2">
+<div class="relative aspect-[16/7.5] w-full overflow-hidden">
+<img alt="Network Intrusion Detection System Screenshot" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4OoCMKiANCbVG-fwoabHdETLjWwQeK4qEXotZtudxQHk_WxJF_GokyJ2wK6KHJtiQ9T1-R8clL2P27gTlKuPW-bkDFdZe63w67-n6sq966kVvrlADZBbReCSL98EmE6VYp40YphKIFZUayu_fXbhCqHkXMln6xZejalwKgPHiWAc0V_To_Gpi17Pck73lYs1NTu7k8rwqeS1KpKp95CO14fck9ePpNVDg4CfQfwK_fhiMPYxa9mhQ6VhENGiwh8lVmieP08yxH6co"/>
+<div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors"></div>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<h3 class="text-[var(--text-primary)] text-lg font-semibold leading-normal mb-1">Network Intrusion Detection System</h3>
+<p class="text-[var(--text-secondary)] text-sm font-normal leading-relaxed mb-3 flex-grow">
+                    An intelligent system using machine learning to detect and prevent network intrusions. Identifies malicious activities and enhances network security.
+                  </p>
+<div class="flex gap-3 mt-auto">
+<a class="text-xs font-medium text-[var(--accent-color)] hover:underline link-hover" href="#">Read Case Study</a>
+<a class="text-xs font-medium text-[var(--accent-color)] hover:underline link-hover" href="#">GitHub Repo</a>
+</div>
+</div>
+</div>
+<div class="bento-item rounded-xl overflow-hidden flex flex-col group">
+<div class="relative aspect-[16/10] w-full overflow-hidden">
+<img alt="Personal Blog Platform Screenshot" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnsgWxr8SYSPqEQyhiSAi2DQ6ftfD590NaLk8s9VYw5oAaRoSAASG_j4lPgHpsLBeb4HozYMjby_6Izrf-QuSm9lirT1F224u_NTigDH1YWVprkkpTaHz-z-vCcmWqmEuG46qZ-nhDb7cqh88tb8_qmOoywsSRy_AIbCppt5MAbMtCWNaDPhMe1IRT6yF2p_ujnQ9beWJXg4VwgbvSCjMLHBnTKTbc4asyxWzgRgG1_PnkKK3JknOI3LowoQu1nUsHKD6FK7xQo65C"/>
+<div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors"></div>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<h3 class="text-[var(--text-primary)] text-lg font-semibold leading-normal mb-1">Personal Blog Platform</h3>
+<p class="text-[var(--text-secondary)] text-sm font-normal leading-relaxed mb-3 flex-grow">
+                    A custom-built blog platform with a focus on sleek design and user experience. Features custom themes and an intuitive content management system.
+                  </p>
+<div class="flex gap-3 mt-auto">
+<a class="text-xs font-medium text-[var(--accent-color)] hover:underline link-hover" href="#">Visit Blog</a>
+<a class="text-xs font-medium text-[var(--accent-color)] hover:underline link-hover" href="#">Learn More</a>
+</div>
+</div>
+</div>
+<div class="bento-item rounded-xl overflow-hidden flex flex-col group">
+<div class="relative aspect-[16/10] w-full overflow-hidden">
+<img alt="Automated Vulnerability Scanner Screenshot" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR4xkdNGviT1ogx26-Lw4x7x2sJNdWtMZBB60-7xwaboETPhcxR8Fvg3__rtgUnGhQ53dz5zo8sMVRB5ZQi8NZAUqhP8KUbbncffBbdYy-gvz4TvOOZ631Yhihzt2-O6okeWZZYsn1jaF7VRFheCv1N-faHLZWIET9SbyRppnkhhUy5rHMGy-W0UGqeP-PsUOto6sNanLsDA-6jbiAWDsgTnKJpMbYJJYUmabCyeNUjXsBlEdMNihlbMadQ34GdtqnbynFVmW_REDb"/>
+<div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors"></div>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<h3 class="text-[var(--text-primary)] text-lg font-semibold leading-normal mb-1">Automated Vulnerability Scanner</h3>
+<p class="text-[var(--text-secondary)] text-sm font-normal leading-relaxed mb-3 flex-grow">
+                    An automated tool for identifying security flaws in web applications. Helps in proactively addressing vulnerabilities and fortifying web defenses.
+                  </p>
+<div class="flex gap-3 mt-auto">
+<a class="text-xs font-medium text-[var(--accent-color)] hover:underline link-hover" href="#">Try Scanner</a>
+<a class="text-xs font-medium text-[var(--accent-color)] hover:underline link-hover" href="#">API Docs</a>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-center mt-10">
+<div class="flex flex-col sm:flex-row gap-4 w-full max-w-md px-4">
+<button class="flex flex-1 items-center justify-center rounded-lg h-12 px-6 bg-[var(--primary-color)] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-blue-500 transition-colors">
+<span class="truncate">View All Projects</span>
+</button>
+<button class="flex flex-1 items-center justify-center rounded-lg h-12 px-6 bg-[var(--secondary-color)] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[var(--accent-color)] hover:text-[var(--bg-primary)] transition-colors border border-transparent hover:border-[var(--accent-color)]">
+<span class="truncate">Contact Me</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<footer class="text-center py-8 border-t border-solid border-t-[var(--secondary-color)] mt-12">
+<p class="text-[var(--text-secondary)] text-sm">© 2024 Alex's Portfolio. All rights reserved.</p>
+<p class="text-xs text-[var(--text-secondary)]/70 mt-1">Designed with a <span class="text-[var(--accent-color)]">Cybersecurity</span> focus.</p>
+</footer>
+</div>
+</div>
+
+</body></html>
