@@ -1,0 +1,121 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #1978e5;
+      }
+      .glow {
+        box-shadow: 0 0 10px 2px var(--primary-color), 0 0 20px 5px var(--primary-color), 0 0 30px 10px var(--primary-color);
+      }
+    </style>
+</head>
+<body class="bg-[#0A0C0F] text-white" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+<div class="relative flex size-full min-h-screen flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#22272D] bg-[#0A0C0F]/80 px-10 py-4 backdrop-blur-md">
+<div class="flex items-center gap-4">
+<div class="size-6 text-[var(--primary-color)]">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_330)">
+<path clip-rule="evenodd" d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clipPath id="clip0_6_330"><rect fill="white" height="48" width="48"></rect></clipPath>
+</defs>
+</svg>
+</div>
+<h2 class="text-xl font-bold leading-tight tracking-[-0.015em]">Alex's Portfolio</h2>
+</div>
+<nav class="flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-sm font-medium leading-normal text-slate-300 hover:text-[var(--primary-color)] transition-colors" href="#">Home</a>
+<a class="text-sm font-medium leading-normal text-[var(--primary-color)]" href="#">Projects</a>
+<a class="text-sm font-medium leading-normal text-slate-300 hover:text-[var(--primary-color)] transition-colors" href="#">Blog</a>
+<a class="text-sm font-medium leading-normal text-slate-300 hover:text-[var(--primary-color)] transition-colors" href="#">Contact</a>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[var(--primary-color)] glow" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDzfGXCAEgRU1taeM39hyi4TOPYWL6gbzflGB38SumxR6Zhhuw_Hj4PTu-OQ1tvsKz-jcI6ryvwCE5lDgEQs6DeWHTQeF99q-oiSQ4hq00vjiUk-b3p2qy522bG4md_hP731r39UNzRkX7eCGKQ0sIN3TzMYlg6lWiCiMV9sDicdA-ccFRKaZsz6qQhewr_IgmXRvDgJr_AicTRzckPZ_giH0up52fVCGMhukNAbvbx5skNZ34jEl2_0W1YR7ZqjF4GQvI1RLB7QASQ");'></div>
+</nav>
+</header>
+<main class="px-10 lg:px-40 py-10 flex flex-1 justify-center">
+<div class="layout-content-container flex flex-col max-w-[1200px] flex-1 gap-8">
+<div class="flex flex-col gap-2 p-4 rounded-xl bg-[#161B22] border border-[#22272D] shadow-xl shadow-[#000000]/30">
+<h1 class="text-[var(--primary-color)] text-4xl font-bold leading-tight tracking-tight">Custom App: SecurePass</h1>
+<p class="text-slate-300 text-lg font-normal leading-relaxed">
+                SecurePass is a custom-built password manager designed with security and user experience in mind. It leverages advanced encryption techniques to ensure your passwords
+                remain safe and accessible only to you. The app features a clean, intuitive interface, making it easy to manage your credentials across all your devices.
+              </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-1 flex flex-col gap-6">
+<div class="p-6 rounded-xl bg-[#161B22] border border-[#22272D] shadow-xl shadow-[#000000]/30">
+<h2 class="text-2xl font-bold leading-tight tracking-[-0.015em] mb-4 text-[var(--primary-color)]">Features</h2>
+<div class="space-y-4">
+<div class="flex items-center gap-3 rounded-lg bg-[#0D1117] p-4 border border-[#22272D]">
+<div class="text-[var(--primary-color)]" data-icon="ShieldCheck" data-size="24px" data-weight="regular">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M208,40H48A16,16,0,0,0,32,56v58.78c0,89.61,75.82,119.34,91,124.39a15.53,15.53,0,0,0,10,0c15.2-5.05,91-34.78,91-124.39V56A16,16,0,0,0,208,40Zm0,74.79c0,78.42-66.35,104.62-80,109.18-13.53-4.51-80-30.69-80-109.18V56H208ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.68l50.34-50.34a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z"></path>
+</svg>
+</div>
+<h3 class="text-slate-100 text-base font-semibold leading-tight">End-to-End Encryption</h3>
+</div>
+<div class="flex items-center gap-3 rounded-lg bg-[#0D1117] p-4 border border-[#22272D]">
+<div class="text-[var(--primary-color)]" data-icon="Key" data-size="24px" data-weight="regular">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M160,16A80.07,80.07,0,0,0,83.91,120.78L26.34,178.34A8,8,0,0,0,24,184v40a8,8,0,0,0,8,8H72a8,8,0,0,0,8-8V208H96a8,8,0,0,0,8-8V184h16a8,8,0,0,0,5.66-2.34l9.56-9.57A80,80,0,1,0,160,16Zm0,144a63.7,63.7,0,0,1-23.65-4.51,8,8,0,0,0-8.84,1.68L116.69,168H96a8,8,0,0,0-8,8v16H72a8,8,0,0,0-8,8v16H40V187.31l58.83-58.82a8,8,0,0,0,1.68-8.84A64,64,0,1,1,160,160Zm32-84a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path>
+</svg>
+</div>
+<h3 class="text-slate-100 text-base font-semibold leading-tight">Password Generation</h3>
+</div>
+<div class="flex items-center gap-3 rounded-lg bg-[#0D1117] p-4 border border-[#22272D]">
+<div class="text-[var(--primary-color)]" data-icon="Lock" data-size="24px" data-weight="regular">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M208,80H176V56a48,48,0,0,0-96,0V80H48A16,16,0,0,0,32,96V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V96A16,16,0,0,0,208,80ZM96,56a32,32,0,0,1,64,0V80H96ZM208,208H48V96H208V208Zm-68-56a12,12,0,1,1-12-12A12,12,0,0,1,140,152Z"></path>
+</svg>
+</div>
+<h3 class="text-slate-100 text-base font-semibold leading-tight">Secure Storage</h3>
+</div>
+</div>
+</div>
+<div class="p-6 rounded-xl bg-[#161B22] border border-[#22272D] shadow-xl shadow-[#000000]/30">
+<h2 class="text-2xl font-bold leading-tight tracking-[-0.015em] mb-4 text-[var(--primary-color)]">Technical Details</h2>
+<div class="space-y-3">
+<div class="grid grid-cols-[auto_1fr] gap-x-4 border-t border-t-[#22272D] py-3 first:border-t-0 first:pt-0">
+<p class="text-slate-400 text-sm font-medium">Platform</p>
+<p class="text-slate-100 text-sm font-normal">Web, iOS, Android</p>
+</div>
+<div class="grid grid-cols-[auto_1fr] gap-x-4 border-t border-t-[#22272D] py-3">
+<p class="text-slate-400 text-sm font-medium">Technology Stack</p>
+<p class="text-slate-100 text-sm font-normal">React Native, Node.js, PostgreSQL</p>
+</div>
+<div class="grid grid-cols-[auto_1fr] gap-x-4 border-t border-t-[#22272D] py-3">
+<p class="text-slate-400 text-sm font-medium">Encryption</p>
+<p class="text-slate-100 text-sm font-normal">AES-256</p>
+</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-2 p-6 rounded-xl bg-[#161B22] border border-[#22272D] shadow-xl shadow-[#000000]/30">
+<h2 class="text-2xl font-bold leading-tight tracking-[-0.015em] mb-4 text-[var(--primary-color)]">Screenshots</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+<div class="w-full bg-center bg-no-repeat aspect-[9/16] sm:aspect-square bg-cover rounded-lg border border-[#22272D] hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC-SIEbU3MKCdWGBw9qAYi8q91roxGRWwrz_Q3mcEF4ZQVo-Mpi-qD84WGaewru3dl7EKXrqWCOa47vJ8x2DPrMBmk2FO9bWU6vOpPn_cIy1pE_p_J9N2y-ZDm1ro2-I52KFYRqlRAxeN7y5Kq-sGRDrRlq0fggUWwiScuf9OnurL3LS1Yw1yLOIeqLcev8P2oYX1bDxFIqw8-nRVgGp7BpdAuN6GFFf25q0ZYQGe9yGgjkq48SsmX-ySnBUYR51QcfdJSqTP1XYamb");'></div>
+<div class="w-full bg-center bg-no-repeat aspect-[9/16] sm:aspect-square bg-cover rounded-lg border border-[#22272D] hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAaTbMAMAnS0S2NyUpM6eVA61_7n-jnNKpT0dTY9WPItB_rVd4svDrT7WleVFlxq-jhe9K6OVI6clcNzAk-3tgBXMiytXSXMm_ITuj4bhIgHLp69fZSTvqArk-R6HuXBL1W2APgrGHDdh2Rh0ZF_gMzIWeP0ly92LksvcRFCMRGXkV5AzpMauBr0S1EP7j2YgyvE47Bm1iN-xMN1JTB4OsRuwRHaYaDo97KRgp6tIkf9CU3qqH7ccudKlleA0qvtPvVVzhzoWYpq8Pj");'></div>
+<div class="w-full bg-center bg-no-repeat aspect-[9/16] sm:aspect-square bg-cover rounded-lg border border-[#22272D] hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBlu83Jc2qCt2OW8JqPHnyXgMR1C5e7yoWFd7Sxfd9e3qJuMfYFOaQ8JOoHS_-PnvP6OejnFtGzGii-InHEMOiQTJsxQZ24VNs_G2M2iytfokICPvaCe7np6nIYDGeuqDR6vjCrqautkfi4UH1a1hXe6WHtYWGGRj3-SR8tWlPn2Q8u3kQCwqjTJ4dSHBG0EameuQQir6GYa_zhRtcFU5resIz3eVrbtY6VP-VgML0T3w9oYq0pBXJpP9xzckNsxzIoB9CTaSEty8b3");'></div>
+</div>
+<div class="mt-6 flex justify-start">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-[var(--primary-color)] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#1462b8] transition-colors">
+<span class="truncate">View on GitHub</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>
