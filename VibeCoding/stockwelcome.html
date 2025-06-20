@@ -1,0 +1,124 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #c5d7eb;
+        --secondary-color: #1e2124;
+        --accent-color: #2c3035;
+        --text-primary: #ffffff;
+        --text-secondary: #a2aab3;
+        --background-dark: #121416;
+      }
+      body {
+        font-family: "Space Grotesk", "Noto Sans", sans-serif;
+      }
+    </style>
+</head>
+<body class="bg-[var(--background-dark)] text-[var(--text-primary)]">
+<div class="relative flex size-full min-h-screen flex-col dark group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[var(--accent-color)] px-6 sm:px-10 py-4">
+<div class="flex items-center gap-3 sm:gap-4">
+<div class="size-6 sm:size-8 text-[var(--primary-color)]">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-[var(--text-primary)] text-xl sm:text-2xl font-bold leading-tight tracking-[-0.015em]">StockUp</h2>
+</div>
+<div class="flex flex-1 justify-end items-center gap-4 sm:gap-6">
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors" href="#">Home</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors" href="#">Market</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors" href="#">Portfolio</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors" href="#">Friends</a>
+</nav>
+<button aria-label="Notifications" class="flex items-center justify-center rounded-full h-10 w-10 bg-[var(--accent-color)] hover:bg-opacity-80 text-[var(--text-primary)] transition-colors">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"></path>
+</svg>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[var(--primary-color)]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD1ZE6cCCD3UQldY5fYO4xllEwwad3ijtkHL6nJ4uR7LjbkPr6-3XmVGzAyCR6IFfAq3uKFP_iokgsIbvYHgcQOKGeRaQcHA8rvcRRgWjthYUBVA3jc4Tr1yYheYpsPfvNdLk_gxQfI1vvJHlmLf1z7nppmkbPsaCK08yFQQzclwlRBw_25o1NHxzCMczK5NoWuHbvabDybIXLZ3_jz0KSBmP_SnEXoZoR4aNJbc_whhx85VpxadFX47XMZUG2bsEKy_DCfuY6BcpQe");'></div>
+</div>
+</header>
+<main class="flex flex-1 flex-col">
+<section class="relative flex min-h-[calc(100vh-80px)] items-center justify-center bg-cover bg-center bg-no-repeat py-16 px-4 sm:px-6 lg:px-8" style='background-image: linear-gradient(rgba(18, 20, 22, 0.7) 0%, rgba(18, 20, 22, 0.9) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDf84jvGOx3BFylyAx3ctWv4ic3cP7pWCxzm72djNZoX-Eo8901F2r1fHE7uvSgjJq6LcQNMUPRgLgsJy2BqCHe1WjPteOxe2RhM6ruw-3fV6gogF3EduQTmhoL-JL6q0LBhGu4JbE_bOWUt2UigfLwEGGEJL5-A_UbZtONpFmJjcjz_SJiB6K6o2x0h3PMlL_F10KG1Qk4v-s2IMxdhvAPshYjUGNFX-cr62TX6E4sbYXAX2i7KInWvHtKqgODhTrYA6NiA0Je7wF1");'>
+<div class="max-w-3xl text-center">
+<h1 class="text-4xl font-black leading-tight tracking-tighter text-[var(--primary-color)] sm:text-5xl md:text-6xl">
+                Invest Together, Grow Together
+              </h1>
+<p class="mt-4 text-lg font-normal text-[var(--text-secondary)] sm:text-xl md:mt-6">
+                Join a community of investors, share insights, and track your portfolio's performance against your friends.
+              </p>
+<button class="mt-8 inline-flex min-w-[120px] items-center justify-center rounded-full h-12 px-6 sm:h-14 sm:px-8 bg-[var(--primary-color)] text-[var(--background-dark)] text-base font-bold leading-normal tracking-[0.015em] transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-offset-2 focus:ring-offset-[var(--background-dark)]">
+<span class="truncate">Get Started</span>
+</button>
+</div>
+</section>
+<section class="py-16 px-4 sm:px-6 lg:px-8 bg-[var(--secondary-color)]">
+<div class="max-w-5xl mx-auto">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold leading-tight tracking-tight text-[var(--text-primary)] sm:text-4xl">
+                  Why Choose StockUp?
+                </h2>
+<p class="mt-4 text-lg text-[var(--text-secondary)]">
+                  StockUp offers a unique blend of social interaction and investment tracking, making it easier and more fun to manage your portfolio.
+                </p>
+</div>
+<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+<div class="flex flex-col gap-4 rounded-xl border border-[var(--accent-color)] bg-[var(--background-dark)] p-6 shadow-lg hover:shadow-xl transition-shadow">
+<div class="text-[var(--primary-color)]" data-icon="Users" data-size="32px" data-weight="regular">
+<svg fill="currentColor" height="32px" viewBox="0 0 256 256" width="32px" xmlns="http://www.w3.org/2000/svg">
+<path d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z"></path>
+</svg>
+</div>
+<div>
+<h3 class="text-xl font-bold leading-tight text-[var(--text-primary)]">Connect with Friends</h3>
+<p class="mt-1 text-sm font-normal text-[var(--text-secondary)]">Build your investment network by connecting with friends and sharing insights.</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-xl border border-[var(--accent-color)] bg-[var(--background-dark)] p-6 shadow-lg hover:shadow-xl transition-shadow">
+<div class="text-[var(--primary-color)]" data-icon="ChartLine" data-size="32px" data-weight="regular">
+<svg fill="currentColor" height="32px" viewBox="0 0 256 256" width="32px" xmlns="http://www.w3.org/2000/svg">
+<path d="M232,208a8,8,0,0,1-8,8H32a8,8,0,0,1-8-8V48a8,8,0,0,1,16,0v94.37L90.73,98a8,8,0,0,1,10.07-.38l58.81,44.11L218.73,90a8,8,0,1,1,10.54,12l-64,56a8,8,0,0,1-10.07.38L96.39,114.29,40,163.63V200H224A8,8,0,0,1,232,208Z"></path>
+</svg>
+</div>
+<div>
+<h3 class="text-xl font-bold leading-tight text-[var(--text-primary)]">Track Your Performance</h3>
+<p class="mt-1 text-sm font-normal text-[var(--text-secondary)]">Monitor your portfolio's performance and compare it with your friends in real-time.</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-xl border border-[var(--accent-color)] bg-[var(--background-dark)] p-6 shadow-lg hover:shadow-xl transition-shadow">
+<div class="text-[var(--primary-color)]" data-icon="UsersThree" data-size="32px" data-weight="regular">
+<svg fill="currentColor" height="32px" viewBox="0 0 256 256" width="32px" xmlns="http://www.w3.org/2000/svg">
+<path d="M244.8,150.4a8,8,0,0,1-11.2-1.6A51.6,51.6,0,0,0,192,128a8,8,0,0,1-7.37-4.89,8,8,0,0,1,0-6.22A8,8,0,0,1,192,112a24,24,0,1,0-23.24-30,8,8,0,1,1-15.5-4A40,40,0,1,1,219,117.51a67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,244.8,150.4ZM190.92,212a8,8,0,1,1-13.84,8,57,57,0,0,0-98.16,0,8,8,0,1,1-13.84-8,72.06,72.06,0,0,1,33.74-29.92,48,48,0,1,1,58.36,0A72.06,72.06,0,0,1,190.92,212ZM128,176a32,32,0,1,0-32-32A32,32,0,0,0,128,176ZM72,120a8,8,0,0,0-8-8A24,24,0,1,1,87.24,82a8,8,0,1,0,15.5-4A40,40,0,1,0,37,117.51,67.94,67.94,0,0,0,9.6,139.19a8,8,0,1,0,12.8,9.61A51.6,51.6,0,0,1,64,128,8,8,0,0,0,72,120Z"></path>
+</svg>
+</div>
+<div>
+<h3 class="text-xl font-bold leading-tight text-[var(--text-primary)]">Learn and Grow</h3>
+<p class="mt-1 text-sm font-normal text-[var(--text-secondary)]">Access educational resources and tips to enhance your investment knowledge.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-[var(--background-dark)] border-t border-[var(--accent-color)]">
+<div class="max-w-5xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center">
+<div class="flex flex-wrap items-center justify-center gap-6 mb-6">
+<a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] text-sm font-normal leading-normal transition-colors" href="#">Terms of Service</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] text-sm font-normal leading-normal transition-colors" href="#">Privacy Policy</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] text-sm font-normal leading-normal transition-colors" href="#">Contact Us</a>
+</div>
+<p class="text-[var(--text-secondary)] text-sm font-normal leading-normal">© 2024 StockUp. All rights reserved.</p>
+</div>
+</footer>
+</div>
+</div>
+
+</body></html>

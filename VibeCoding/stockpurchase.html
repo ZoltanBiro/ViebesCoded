@@ -1,0 +1,107 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B600%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #c5d7eb;
+        --secondary-color: #2c3035;
+        --background-color: #121416;
+        --text-primary: #ffffff;
+        --text-secondary: #a2aab3;
+        --border-color: #40474f;
+        --input-background: #1e2124;
+      }
+      body {
+        font-family: "Space Grotesk", "Noto Sans", sans-serif;
+      }
+      .form-input {
+        background-image: var(--select-button-svg);
+      }
+    </style>
+</head>
+<body class="bg-[var(--background-color)] text-[var(--text-primary)]">
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden" style="--select-button-svg: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(162,170,179)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e');">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[var(--secondary-color)] px-10 py-4">
+<div class="flex items-center gap-4">
+<div class="size-6 text-[var(--primary-color)]">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M39.998 35.764C39.9944 35.7463 39.9875 35.7155 39.9748 35.6706C39.9436 35.5601 39.8949 35.4259 39.8346 35.2825C39.8168 35.2403 39.7989 35.1993 39.7813 35.1602C38.5103 34.2887 35.9788 33.0607 33.7095 32.5189C30.9875 31.8691 27.6413 31.4783 24 31.4783C20.3587 31.4783 17.0125 31.8691 14.2905 32.5189C12.0012 33.0654 9.44505 34.3104 8.18538 35.1832C8.17384 35.2075 8.16216 35.233 8.15052 35.2592C8.09919 35.3751 8.05721 35.4886 8.02977 35.589C8.00356 35.6848 8.00039 35.7333 8.00004 35.7388C8.00004 35.739 8 35.7393 8.00004 35.7388C8.00004 35.7641 8.0104 36.0767 8.68485 36.6314C9.34546 37.1746 10.4222 37.7531 11.9291 38.2772C14.9242 39.319 19.1919 40 24 40C28.8081 40 33.0758 39.319 36.0709 38.2772C37.5778 37.7531 38.6545 37.1746 39.3151 36.6314C39.9006 36.1499 39.9857 35.8511 39.998 35.764ZM4.95178 32.7688L21.4543 6.30267C22.6288 4.4191 25.3712 4.41909 26.5457 6.30267L43.0534 32.777C43.0709 32.8052 43.0878 32.8338 43.104 32.8629L41.3563 33.8352C43.104 32.8629 43.1038 32.8626 43.104 32.8629L43.1051 32.865L43.1065 32.8675L43.1101 32.8739L43.1199 32.8918C43.1276 32.906 43.1377 32.9246 43.1497 32.9473C43.1738 32.9925 43.2062 33.0545 43.244 33.1299C43.319 33.2792 43.4196 33.489 43.5217 33.7317C43.6901 34.1321 44 34.9311 44 35.7391C44 37.4427 43.003 38.7775 41.8558 39.7209C40.6947 40.6757 39.1354 41.4464 37.385 42.0552C33.8654 43.2794 29.133 44 24 44C18.867 44 14.1346 43.2794 10.615 42.0552C8.86463 41.4464 7.30529 40.6757 6.14419 39.7209C4.99695 38.7775 3.99999 37.4427 3.99999 35.7391C3.99999 34.8725 4.29264 34.0922 4.49321 33.6393C4.60375 33.3898 4.71348 33.1804 4.79687 33.0311C4.83898 32.9556 4.87547 32.8935 4.9035 32.8471C4.91754 32.8238 4.92954 32.8043 4.93916 32.7889L4.94662 32.777L4.95178 32.7688ZM35.9868 29.004L24 9.77997L12.0131 29.004C12.4661 28.8609 12.9179 28.7342 13.3617 28.6282C16.4281 27.8961 20.0901 27.4783 24 27.4783C27.9099 27.4783 31.5719 27.8961 34.6383 28.6282C35.082 28.7342 35.5339 28.8609 35.9868 29.004Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h1 class="text-[var(--text-primary)] text-xl font-bold tracking-tight">StockSavvy</h1>
+</div>
+<div class="flex flex-1 justify-end items-center gap-6">
+<div class="flex gap-2">
+<button aria-label="Search" class="flex items-center justify-center rounded-full h-10 w-10 bg-[var(--secondary-color)] text-[var(--text-primary)] hover:bg-[var(--border-color)] transition-colors duration-200">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+</svg>
+</button>
+<button aria-label="Menu" class="flex items-center justify-center rounded-full h-10 w-10 bg-[var(--secondary-color)] text-[var(--text-primary)] hover:bg-[var(--border-color)] transition-colors duration-200">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M80,64a8,8,0,0,1,8-8H216a8,8,0,0,1,0,16H88A8,8,0,0,1,80,64Zm136,56H88a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Zm0,64H88a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16ZM44,52A12,12,0,1,0,56,64,12,12,0,0,0,44,52Zm0,64a12,12,0,1,0,12,12A12,12,0,0,0,44,116Zm0,64a12,12,0,1,0,12,12A12,12,0,0,0,44,180Z"></path>
+</svg>
+</button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[var(--primary-color)]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB0NSabNw3Hw5729dxTQkS_hAMoG_jDhLfuvTHMD0pUGQMVEgrivbgnG-KzLzx-0GlARY4fEL-DwtoGk0SSNE9YjAD-Y6FQ_TsrASxWCHt5YV_NEQX9fX2WGYXo3fhpnD50JJOpnG2sDLsNYj-2j4ZANeoNgor4FsmPDBJ8W7fs6jaOMM65ijj5NE-0eF62gWESZPSwypxFwlco1v7DFKSTfSVXvxQOJNQ2w_bi05qAaGdOl6I7GGov5iUUW9me8X8WqzCdsdvs9F36");'></div>
+</div>
+</header>
+<main class="px-40 flex flex-1 justify-center py-10">
+<div class="flex flex-col w-full max-w-md space-y-8">
+<div class="flex items-center space-x-2 text-sm">
+<a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors duration-200" href="#">Portfolio</a>
+<span class="text-[var(--text-secondary)]">/</span>
+<span class="text-[var(--text-primary)] font-medium">Trade</span>
+</div>
+<h2 class="text-[var(--text-primary)] text-4xl font-bold tracking-tight">Execute Trade</h2>
+<form class="space-y-6">
+<div>
+<label class="block text-sm font-medium text-[var(--text-primary)] mb-2" for="stock-select">Stock</label>
+<select class="form-input w-full rounded-lg text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] border border-[var(--border-color)] bg-[var(--input-background)] h-14 px-4 text-base appearance-none" id="stock-select" name="stock">
+<option disabled="" selected="" value="">Select a stock</option>
+<option value="AAPL">Apple (AAPL)</option>
+<option value="GOOGL">Alphabet (GOOGL)</option>
+<option value="MSFT">Microsoft (MSFT)</option>
+<option value="TSLA">Tesla (TSLA)</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-[var(--text-primary)] mb-2" for="shares">Shares</label>
+<input class="form-input w-full rounded-lg text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] border border-[var(--border-color)] bg-[var(--input-background)] h-14 placeholder:text-[var(--text-secondary)] px-4 text-base" id="shares" name="shares" placeholder="Enter number of shares" type="number"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-[var(--text-primary)] mb-2" for="price">Current Price</label>
+<div class="flex items-center w-full rounded-lg border border-[var(--border-color)] bg-[var(--input-background)] h-14 px-4 text-base text-[var(--text-secondary)]">
+                  $175.30 
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-[var(--text-primary)] mb-2" for="estimated-cost">Estimated Cost</label>
+<div class="flex items-center w-full rounded-lg border border-[var(--border-color)] bg-[var(--input-background)] h-14 px-4 text-base text-[var(--text-secondary)]">
+                  $0.00 
+</div>
+</div>
+<div class="flex gap-4 pt-4">
+<button class="flex-1 h-12 px-6 rounded-full bg-[var(--secondary-color)] text-[var(--text-primary)] text-sm font-semibold hover:bg-red-700/80 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-[var(--background-color)]" type="button">
+                  Sell
+                </button>
+<button class="flex-1 h-12 px-6 rounded-full bg-[var(--primary-color)] text-[var(--background-color)] text-sm font-semibold hover:bg-green-500/90 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-[var(--background-color)]" type="submit">
+                  Buy
+                </button>
+</div>
+</form>
+<div class="text-center text-xs text-[var(--text-secondary)] pt-4">
+              Market orders are executed at the best available price. Prices may fluctuate.
+            </div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

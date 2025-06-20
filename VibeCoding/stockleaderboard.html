@@ -1,0 +1,150 @@
+<html><head>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<meta charset="utf-8"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #c5d7eb;
+        --background-color: #121416;
+        --secondary-background-color: #1e2124;
+        --border-color: #2c3035;
+        --accent-border-color: #40474f;
+        --text-primary: #ffffff;
+        --text-secondary: #a2aab3;
+        --text-accent: #c5d7eb;
+        --positive-change: #4caf50;--negative-change: #f44336;}
+      .font-space-grotesk {
+        font-family: "Space Grotesk", "Noto Sans", sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+</head>
+<body class="font-space-grotesk bg-[var(--background-color)] text-[var(--text-primary)]">
+<div class="relative flex size-full min-h-screen flex-col dark group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[var(--border-color)] px-6 sm:px-10 py-4">
+<div class="flex items-center gap-3">
+<div class="text-[var(--primary-color)]">
+<svg class="size-6" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-[var(--text-primary)] text-xl font-bold leading-tight tracking-[-0.015em]">Stock Tracker</h2>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-[var(--text-secondary)] hover:text-[var(--text-accent)] text-sm font-medium leading-normal transition-colors" href="#">Home</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--text-accent)] text-sm font-medium leading-normal transition-colors" href="#">My Portfolio</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--text-accent)] text-sm font-medium leading-normal transition-colors" href="#">Friends</a>
+<a class="text-[var(--text-accent)] text-sm font-bold leading-normal" href="#">Leaderboard</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex cursor-pointer items-center justify-center rounded-full h-10 w-10 bg-[var(--border-color)] hover:bg-[var(--accent-border-color)] text-[var(--text-secondary)] hover:text-[var(--text-accent)] transition-colors">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[var(--primary-color)]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBoslbAftc0i1u17D-QjJLckvEpTnhdjS8spzftXvNOlf2jaCG0glipCZz6PLXDQyNUBhqcD-2F1O6awxKukHSirZHda8WQSGgLyJ4lp6QuJcMc1jZ6s6u7FSQ5SlAGSwMSxqNL-AiKW4_BKjDtTHCGT9JZvjiKsDuXXoDWbnmQXBwQc_acI_4s5zOXLLfmUf0k-_I37G5JSkE5jHO-WvC7PK8hSDxa8Pr90B25BkGvjj2e4hOdfyKA-n0AmXp3D6uIFSygBk0auYcs");'></div>
+<button class="md:hidden flex cursor-pointer items-center justify-center rounded-full h-10 w-10 bg-[var(--border-color)] hover:bg-[var(--accent-border-color)] text-[var(--text-secondary)] hover:text-[var(--text-accent)] transition-colors">
+<span class="material-symbols-outlined text-xl">menu</span>
+</button>
+</div>
+</header>
+<main class="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 flex flex-1 justify-center py-8">
+<div class="layout-content-container flex flex-col w-full max-w-5xl flex-1">
+<div class="flex flex-wrap justify-between items-center gap-4 p-4 mb-6">
+<h1 class="text-[var(--text-primary)] tracking-tight text-3xl sm:text-4xl font-bold leading-tight">Friends Leaderboard</h1>
+</div>
+<div class="px-0 sm:px-4 py-3 @container">
+<div class="overflow-hidden rounded-xl border border-[var(--accent-border-color)] bg-[var(--background-color)] shadow-xl">
+<div class="overflow-x-auto">
+<table class="min-w-full">
+<thead class="bg-[var(--secondary-background-color)]">
+<tr>
+<th class="table-col-rank px-4 py-3.5 text-left text-[var(--text-secondary)] text-xs sm:text-sm font-semibold uppercase tracking-wider w-16 sm:w-20" scope="col">Rank</th>
+<th class="table-col-name px-4 py-3.5 text-left text-[var(--text-secondary)] text-xs sm:text-sm font-semibold uppercase tracking-wider" scope="col">Name</th>
+<th class="table-col-value px-4 py-3.5 text-left text-[var(--text-secondary)] text-xs sm:text-sm font-semibold uppercase tracking-wider" scope="col">Portfolio Value</th>
+<th class="table-col-change px-4 py-3.5 text-left text-[var(--text-secondary)] text-xs sm:text-sm font-semibold uppercase tracking-wider w-24 sm:w-32" scope="col">Change (24h)</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[var(--accent-border-color)]">
+<tr class="hover:bg-[var(--secondary-background-color)] transition-colors">
+<td class="table-col-rank h-[72px] px-4 py-3 text-[var(--text-primary)] text-sm font-medium">
+<span class="inline-flex items-center justify-center size-8 rounded-full bg-[var(--primary-color)] text-[var(--background-color)] font-bold">1</span>
+</td>
+<td class="table-col-name h-[72px] px-4 py-3 text-[var(--text-primary)] text-sm font-medium">Sophia Carter</td>
+<td class="table-col-value h-[72px] px-4 py-3 text-[var(--text-secondary)] text-sm">$1,250,000</td>
+<td class="table-col-change h-[72px] px-4 py-3 text-[var(--positive-change)] text-sm font-semibold flex items-center">
+<span class="material-symbols-outlined text-lg mr-1">arrow_drop_up</span> +15%
+                        </td>
+</tr>
+<tr class="hover:bg-[var(--secondary-background-color)] transition-colors">
+<td class="table-col-rank h-[72px] px-4 py-3 text-[var(--text-primary)] text-sm font-medium">
+<span class="inline-flex items-center justify-center size-8 rounded-full bg-[var(--primary-color)] text-[var(--background-color)] font-bold">2</span>
+</td>
+<td class="table-col-name h-[72px] px-4 py-3 text-[var(--text-primary)] text-sm font-medium">Ethan Bennett</td>
+<td class="table-col-value h-[72px] px-4 py-3 text-[var(--text-secondary)] text-sm">$1,100,000</td>
+<td class="table-col-change h-[72px] px-4 py-3 text-[var(--positive-change)] text-sm font-semibold flex items-center">
+<span class="material-symbols-outlined text-lg mr-1">arrow_drop_up</span> +10%
+                        </td>
+</tr>
+<tr class="hover:bg-[var(--secondary-background-color)] transition-colors">
+<td class="table-col-rank h-[72px] px-4 py-3 text-[var(--text-primary)] text-sm font-medium">
+<span class="inline-flex items-center justify-center size-8 rounded-full bg-[var(--primary-color)] text-[var(--background-color)] font-bold">3</span>
+</td>
+<td class="table-col-name h-[72px] px-4 py-3 text-[var(--text-primary)] text-sm font-medium">Olivia Hayes</td>
+<td class="table-col-value h-[72px] px-4 py-3 text-[var(--text-secondary)] text-sm">$950,000</td>
+<td class="table-col-change h-[72px] px-4 py-3 text-[var(--positive-change)] text-sm font-semibold flex items-center">
+<span class="material-symbols-outlined text-lg mr-1">arrow_drop_up</span> +5%
+                        </td>
+</tr>
+<tr class="hover:bg-[var(--secondary-background-color)] transition-colors">
+<td class="table-col-rank h-[72px] px-4 py-3 text-[var(--text-primary)] text-sm font-medium">4</td>
+<td class="table-col-name h-[72px] px-4 py-3 text-[var(--text-primary)] text-sm font-medium">Noah Thompson</td>
+<td class="table-col-value h-[72px] px-4 py-3 text-[var(--text-secondary)] text-sm">$800,000</td>
+<td class="table-col-change h-[72px] px-4 py-3 text-[var(--negative-change)] text-sm font-semibold flex items-center">
+<span class="material-symbols-outlined text-lg mr-1">arrow_drop_down</span> -2%
+                        </td>
+</tr>
+<tr class="hover:bg-[var(--secondary-background-color)] transition-colors">
+<td class="table-col-rank h-[72px] px-4 py-3 text-[var(--text-primary)] text-sm font-medium">5</td>
+<td class="table-col-name h-[72px] px-4 py-3 text-[var(--text-primary)] text-sm font-medium">Ava Mitchell</td>
+<td class="table-col-value h-[72px] px-4 py-3 text-[var(--text-secondary)] text-sm">$750,000</td>
+<td class="table-col-change h-[72px] px-4 py-3 text-[var(--negative-change)] text-sm font-semibold flex items-center">
+<span class="material-symbols-outlined text-lg mr-1">arrow_drop_down</span> -5%
+                        </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<style>
+                @container (max-width: 640px) {
+                  .table-col-value { display: none; }
+                }
+                @container (max-width: 480px) {
+                  .table-col-change { display: none; }
+                }
+                 @container (max-width: 380px) {
+                  .table-col-name {
+                    max-width: 120px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  }
+                }
+              </style>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

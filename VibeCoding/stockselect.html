@@ -1,0 +1,195 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #c5d7eb;
+        --secondary-color: #1e2124;
+        --accent-color: #4ade80;--danger-color: #f87171;--text-primary: #ffffff;
+        --text-secondary: #a2aab3;
+        --border-color: #2c3035;
+        --surface-color: #121416;
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+</head>
+<body class="bg-[var(--surface-color)]" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+<div class="relative flex size-full min-h-screen flex-col dark group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[var(--border-color)] px-6 md:px-10 py-4 shadow-md">
+<div class="flex items-center gap-6 md:gap-8">
+<div class="flex items-center gap-3 text-[var(--primary-color)]">
+<span class="material-symbols-outlined text-3xl text-[var(--primary-color)]">insights</span>
+<h2 class="text-xl font-bold leading-tight tracking-tight">StockUp</h2>
+</div>
+<nav class="hidden md:flex items-center gap-6 lg:gap-9">
+<a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors" href="#">Home</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors" href="#">Portfolio</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors" href="#">Leaderboard</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors" href="#">News</a>
+</nav>
+</div>
+<div class="flex items-center gap-4 md:gap-6">
+<label class="hidden sm:flex flex-col min-w-32 !h-10 max-w-xs">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-[var(--text-secondary)] flex border border-r-0 border-[var(--border-color)] bg-[var(--secondary-color)] items-center justify-center pl-3 rounded-l-lg">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-[var(--text-primary)] focus:outline-0 focus:ring-2 focus:ring-[var(--primary-color)] border border-l-0 border-[var(--border-color)] bg-[var(--secondary-color)] h-full placeholder:text-[var(--text-secondary)] px-3 text-sm font-normal leading-normal" placeholder="Search" value=""/>
+</div>
+</label>
+<button class="sm:hidden text-[var(--text-secondary)] hover:text-[var(--primary-color)]">
+<span class="material-symbols-outlined">search</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[var(--primary-color)] transition-all hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD1Frb2w0jmhrlNjiiEEjosltzNoJGR8-8tvDgACOD-UFWm6owbiFrE09k6pr5DuHqj3EIodizbgA4VOnxweV2O0_cG0nhkPK02Pa1XiNkl2SKIrez2vzExJQRumoRaaMmEXYnaig8RECUgr7wXgGDDRWQIfrLsFsk6z3vGwsOEOxJGhI2y6_9iTq_RDGlFt-eZ00WjGh3guTD41UZVgOdAWKZSZroShB7C2AHPfbqFPS10MU9gk75kLRWmMtZIr4BLcjY9gcxfeWmV");'></div>
+</div>
+</header>
+<main class="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 flex flex-1 justify-center py-6 md:py-10">
+<div class="layout-content-container flex flex-col max-w-5xl flex-1 w-full">
+<div class="px-4 py-3">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full shadow">
+<div class="text-[var(--text-secondary)] flex border border-r-0 border-[var(--border-color)] bg-[var(--secondary-color)] items-center justify-center pl-4 rounded-l-lg">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-[var(--text-primary)] focus:outline-0 focus:ring-2 focus:ring-[var(--primary-color)] border border-l-0 border-[var(--border-color)] bg-[var(--secondary-color)] h-full placeholder:text-[var(--text-secondary)] px-4 text-base font-normal leading-normal" placeholder="Search for stocks (e.g. AAPL, TSLA, AMZN)" value=""/>
+</div>
+</label>
+</div>
+<div class="pb-3 mt-4">
+<div class="flex border-b border-[var(--border-color)] px-4 gap-6 md:gap-8">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-[var(--primary-color)] text-[var(--primary-color)] pb-3 pt-2" href="#">
+<p class="text-sm font-semibold leading-normal tracking-wide">All Stocks</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[var(--text-secondary)] hover:text-[var(--primary-color)] hover:border-b-[var(--primary-color)]/50 pb-3 pt-2 transition-colors" href="#">
+<p class="text-sm font-semibold leading-normal tracking-wide">My Watchlist</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[var(--text-secondary)] hover:text-[var(--primary-color)] hover:border-b-[var(--primary-color)]/50 pb-3 pt-2 transition-colors" href="#">
+<p class="text-sm font-semibold leading-normal tracking-wide">Trending</p>
+</a>
+</div>
+</div>
+<div class="px-4 py-3 @container">
+<div class="flex overflow-hidden rounded-xl border border-[var(--border-color)] bg-[var(--secondary-color)] shadow-lg">
+<table class="flex-1 w-full">
+<thead class="bg-black/20">
+<tr class="border-b border-[var(--border-color)]">
+<th class="table-column-symbol px-4 py-4 text-left text-[var(--primary-color)] w-1/5 text-xs sm:text-sm font-semibold leading-normal uppercase tracking-wider">Symbol</th>
+<th class="table-column-name px-4 py-4 text-left text-[var(--primary-color)] w-2/5 text-xs sm:text-sm font-semibold leading-normal uppercase tracking-wider">Name</th>
+<th class="table-column-price px-4 py-4 text-right text-[var(--primary-color)] w-1/5 text-xs sm:text-sm font-semibold leading-normal uppercase tracking-wider">Price</th>
+<th class="table-column-change px-4 py-4 text-right text-[var(--primary-color)] w-1/5 text-xs sm:text-sm font-semibold leading-normal uppercase tracking-wider">Change</th>
+<th class="table-column-volume px-4 py-4 text-right text-[var(--primary-color)] w-1/5 text-xs sm:text-sm font-semibold leading-normal uppercase tracking-wider">Volume</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[var(--border-color)]">
+<tr class="hover:bg-white/5 transition-colors group">
+<td class="table-column-symbol h-[72px] px-4 py-3 w-1/5 text-[var(--text-primary)] text-sm font-medium leading-normal group-hover:text-[var(--primary-color)]">ABC</td>
+<td class="table-column-name h-[72px] px-4 py-3 w-2/5 text-[var(--text-secondary)] text-sm font-normal leading-normal">Alpha Beta Corp</td>
+<td class="table-column-price h-[72px] px-4 py-3 w-1/5 text-[var(--text-secondary)] text-sm font-normal leading-normal text-right">$150.25</td>
+<td class="table-column-change h-[72px] px-4 py-3 w-1/5 text-[var(--accent-color)] text-sm font-semibold leading-normal text-right">+2.50%</td>
+<td class="table-column-volume h-[72px] px-4 py-3 w-1/5 text-[var(--text-secondary)] text-sm font-normal leading-normal text-right">1.23M</td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors group">
+<td class="table-column-symbol h-[72px] px-4 py-3 w-1/5 text-[var(--text-primary)] text-sm font-medium leading-normal group-hover:text-[var(--primary-color)]">XYZ</td>
+<td class="table-column-name h-[72px] px-4 py-3 w-2/5 text-[var(--text-secondary)] text-sm font-normal leading-normal">Xenith Dynamics</td>
+<td class="table-column-price h-[72px] px-4 py-3 w-1/5 text-[var(--text-secondary)] text-sm font-normal leading-normal text-right">$75.50</td>
+<td class="table-column-change h-[72px] px-4 py-3 w-1/5 text-[var(--danger-color)] text-sm font-semibold leading-normal text-right">-1.20%</td>
+<td class="table-column-volume h-[72px] px-4 py-3 w-1/5 text-[var(--text-secondary)] text-sm font-normal leading-normal text-right">876K</td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors group">
+<td class="table-column-symbol h-[72px] px-4 py-3 w-1/5 text-[var(--text-primary)] text-sm font-medium leading-normal group-hover:text-[var(--primary-color)]">DEF</td>
+<td class="table-column-name h-[72px] px-4 py-3 w-2/5 text-[var(--text-secondary)] text-sm font-normal leading-normal">Delta Echo Financial</td>
+<td class="table-column-price h-[72px] px-4 py-3 w-1/5 text-[var(--text-secondary)] text-sm font-normal leading-normal text-right">$220.75</td>
+<td class="table-column-change h-[72px] px-4 py-3 w-1/5 text-[var(--accent-color)] text-sm font-semibold leading-normal text-right">+1.80%</td>
+<td class="table-column-volume h-[72px] px-4 py-3 w-1/5 text-[var(--text-secondary)] text-sm font-normal leading-normal text-right">543K</td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors group">
+<td class="table-column-symbol h-[72px] px-4 py-3 w-1/5 text-[var(--text-primary)] text-sm font-medium leading-normal group-hover:text-[var(--primary-color)]">GHI</td>
+<td class="table-column-name h-[72px] px-4 py-3 w-2/5 text-[var(--text-secondary)] text-sm font-normal leading-normal">Gamma Holdings Inc</td>
+<td class="table-column-price h-[72px] px-4 py-3 w-1/5 text-[var(--text-secondary)] text-sm font-normal leading-normal text-right">$90.10</td>
+<td class="table-column-change h-[72px] px-4 py-3 w-1/5 text-[var(--accent-color)] text-sm font-semibold leading-normal text-right">+0.50%</td>
+<td class="table-column-volume h-[72px] px-4 py-3 w-1/5 text-[var(--text-secondary)] text-sm font-normal leading-normal text-right">987K</td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors group">
+<td class="table-column-symbol h-[72px] px-4 py-3 w-1/5 text-[var(--text-primary)] text-sm font-medium leading-normal group-hover:text-[var(--primary-color)]">JKL</td>
+<td class="table-column-name h-[72px] px-4 py-3 w-2/5 text-[var(--text-secondary)] text-sm font-normal leading-normal">Jupiter Labs</td>
+<td class="table-column-price h-[72px] px-4 py-3 w-1/5 text-[var(--text-secondary)] text-sm font-normal leading-normal text-right">$110.50</td>
+<td class="table-column-change h-[72px] px-4 py-3 w-1/5 text-[var(--danger-color)] text-sm font-semibold leading-normal text-right">-0.30%</td>
+<td class="table-column-volume h-[72px] px-4 py-3 w-1/5 text-[var(--text-secondary)] text-sm font-normal leading-normal text-right">654K</td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors group">
+<td class="table-column-symbol h-[72px] px-4 py-3 w-1/5 text-[var(--text-primary)] text-sm font-medium leading-normal group-hover:text-[var(--primary-color)]">MNO</td>
+<td class="table-column-name h-[72px] px-4 py-3 w-2/5 text-[var(--text-secondary)] text-sm font-normal leading-normal">Mystic Networks</td>
+<td class="table-column-price h-[72px] px-4 py-3 w-1/5 text-[var(--text-secondary)] text-sm font-normal leading-normal text-right">$180.90</td>
+<td class="table-column-change h-[72px] px-4 py-3 w-1/5 text-[var(--accent-color)] text-sm font-semibold leading-normal text-right">+1.10%</td>
+<td class="table-column-volume h-[72px] px-4 py-3 w-1/5 text-[var(--text-secondary)] text-sm font-normal leading-normal text-right">321K</td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors group">
+<td class="table-column-symbol h-[72px] px-4 py-3 w-1/5 text-[var(--text-primary)] text-sm font-medium leading-normal group-hover:text-[var(--primary-color)]">PQR</td>
+<td class="table-column-name h-[72px] px-4 py-3 w-2/5 text-[var(--text-secondary)] text-sm font-normal leading-normal">Phoenix Resources</td>
+<td class="table-column-price h-[72px] px-4 py-3 w-1/5 text-[var(--text-secondary)] text-sm font-normal leading-normal text-right">$60.20</td>
+<td class="table-column-change h-[72px] px-4 py-3 w-1/5 text-[var(--danger-color)] text-sm font-semibold leading-normal text-right">-0.80%</td>
+<td class="table-column-volume h-[72px] px-4 py-3 w-1/5 text-[var(--text-secondary)] text-sm font-normal leading-normal text-right">765K</td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors group">
+<td class="table-column-symbol h-[72px] px-4 py-3 w-1/5 text-[var(--text-primary)] text-sm font-medium leading-normal group-hover:text-[var(--primary-color)]">STU</td>
+<td class="table-column-name h-[72px] px-4 py-3 w-2/5 text-[var(--text-secondary)] text-sm font-normal leading-normal">Sigma Technologies</td>
+<td class="table-column-price h-[72px] px-4 py-3 w-1/5 text-[var(--text-secondary)] text-sm font-normal leading-normal text-right">$135.75</td>
+<td class="table-column-change h-[72px] px-4 py-3 w-1/5 text-[var(--accent-color)] text-sm font-semibold leading-normal text-right">+2.20%</td>
+<td class="table-column-volume h-[72px] px-4 py-3 w-1/5 text-[var(--text-secondary)] text-sm font-normal leading-normal text-right">432K</td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors group">
+<td class="table-column-symbol h-[72px] px-4 py-3 w-1/5 text-[var(--text-primary)] text-sm font-medium leading-normal group-hover:text-[var(--primary-color)]">VWX</td>
+<td class="table-column-name h-[72px] px-4 py-3 w-2/5 text-[var(--text-secondary)] text-sm font-normal leading-normal">Vanguard Explorations</td>
+<td class="table-column-price h-[72px] px-4 py-3 w-1/5 text-[var(--text-secondary)] text-sm font-normal leading-normal text-right">$45.80</td>
+<td class="table-column-change h-[72px] px-4 py-3 w-1/5 text-[var(--danger-color)] text-sm font-semibold leading-normal text-right">-1.50%</td>
+<td class="table-column-volume h-[72px] px-4 py-3 w-1/5 text-[var(--text-secondary)] text-sm font-normal leading-normal text-right">890K</td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors group">
+<td class="table-column-symbol h-[72px] px-4 py-3 w-1/5 text-[var(--text-primary)] text-sm font-medium leading-normal group-hover:text-[var(--primary-color)]">YZA</td>
+<td class="table-column-name h-[72px] px-4 py-3 w-2/5 text-[var(--text-secondary)] text-sm font-normal leading-normal">Ypsilon Analytics</td>
+<td class="table-column-price h-[72px] px-4 py-3 w-1/5 text-[var(--text-secondary)] text-sm font-normal leading-normal text-right">$100.00</td>
+<td class="table-column-change h-[72px] px-4 py-3 w-1/5 text-[var(--accent-color)] text-sm font-semibold leading-normal text-right">+0.70%</td>
+<td class="table-column-volume h-[72px] px-4 py-3 w-1/5 text-[var(--text-secondary)] text-sm font-normal leading-normal text-right">567K</td>
+</tr>
+</tbody>
+</table>
+</div>
+<style>
+                @container (max-width: 768px) {
+                  .table-column-volume { display: none; }
+                  .table-column-name { width: 40%;}
+                  .table-column-price, .table-column-change, .table-column-symbol { width: 20%;}
+                }
+                @container (max-width: 640px) {
+                  .table-column-price { display: none; }
+                  .table-column-symbol { width: 30%;}
+                  .table-column-name { width: 40%;}
+                  .table-column-change { width: 30%;}
+                  th, td { font-size: 0.8rem; padding-left: 0.75rem; padding-right: 0.75rem;}
+                }
+                 @container (max-width: 480px) {
+                  .table-column-name { display: none; }
+                  .table-column-symbol { width: 50%;}
+                  .table-column-change { width: 50%;}
+                  th, td { font-size: 0.75rem; padding-left: 0.5rem; padding-right: 0.5rem;}
+                }
+              </style>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

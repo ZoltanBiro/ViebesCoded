@@ -1,0 +1,218 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #c5d7eb;
+        --secondary-color: #1a1d21;--accent-color: #3b82f6;--text-primary: #ffffff;
+        --text-secondary: #a2aab3;
+        --border-color: #2c3035;
+        --success-color: #22c55e;--danger-color: #ef4444;}
+      .nav-link-active {
+        color: var(--primary-color) !important;
+        border-bottom: 2px solid var(--primary-color);
+        padding-bottom: 4px;}
+    </style>
+</head>
+<body class="bg-[#121416] text-[var(--text-primary)]" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+<div class="relative flex size-full min-h-screen flex-col dark group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[var(--border-color)] px-6 sm:px-10 py-4">
+<div class="flex items-center gap-3">
+<div class="size-6 text-[var(--primary-color)]">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-[var(--primary-color)] text-xl font-bold leading-tight tracking-[-0.015em]">StockUp</h2>
+</div>
+<nav class="hidden md:flex items-center gap-6 lg:gap-8">
+<a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors nav-link-active" href="#">Dashboard</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors" href="#">Market</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors" href="#">Friends</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors" href="#">Leaderboard</a>
+</nav>
+<div class="flex items-center gap-3 sm:gap-4">
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-[var(--secondary-color)] hover:bg-[#3a3f44] text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors">
+<span class="material-icons text-xl">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[var(--primary-color)]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAhmLB6maHXNdvUCUOL_Ed579eXUKyheMAYfyKbxl194eMpuVGxf6zD7zqyw56yvqckwz7ZI3C5SZ0s9DDeNkId_xJq2aPBEGQ1ApYf6Su_DZNow1Hcg7dnZNdBk5mwP_VRpxeky7lQRT-KA-06N-KAL_rSrvSq5plzz6MuKNvbJL6P2NEkpwzZP_HsAikpxSLiVitc_dIG2pepj8bUqUQhVVPBNnf22JYxhlRmMjEYJdvgycvvrKUD_Kw64dNE6smhHPy2u_UH0bR6");'></div>
+<button class="md:hidden flex items-center justify-center rounded-md h-10 w-10 bg-[var(--secondary-color)] hover:bg-[#3a3f44] text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors">
+<span class="material-icons text-2xl">menu</span>
+</button>
+</div>
+</header>
+<main class="px-4 sm:px-10 lg:px-20 xl:px-40 flex flex-1 justify-center py-8">
+<div class="layout-content-container flex flex-col max-w-6xl flex-1 gap-8">
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+<div class="flex flex-col gap-1">
+<h1 class="text-[var(--text-primary)] text-3xl sm:text-4xl font-bold leading-tight">My Portfolio</h1>
+<p class="text-[var(--text-secondary)] text-sm font-normal leading-normal">Track your investments and performance with ease.</p>
+</div>
+<button class="bg-[var(--accent-color)] hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg flex items-center gap-2 transition-colors">
+<span class="material-icons text-lg">add</span>
+                Add Investment
+              </button>
+</div>
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-[var(--secondary-color)] shadow-lg">
+<p class="text-[var(--text-secondary)] text-sm font-medium leading-normal">Total Value</p>
+<p class="text-[var(--text-primary)] text-3xl font-bold leading-tight">$12,500.00</p>
+<div class="flex items-center gap-1 text-[var(--success-color)] text-sm font-medium">
+<span class="material-icons text-base">arrow_upward</span>
+<span>+2.00%</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-[var(--secondary-color)] shadow-lg">
+<p class="text-[var(--text-secondary)] text-sm font-medium leading-normal">Daily Change</p>
+<p class="text-[var(--text-primary)] text-3xl font-bold leading-tight">+$250.00</p>
+<div class="flex items-center gap-1 text-[var(--success-color)] text-sm font-medium">
+<span class="material-icons text-base">arrow_upward</span>
+<span>+1.50% from yesterday</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-[var(--secondary-color)] shadow-lg">
+<p class="text-[var(--text-secondary)] text-sm font-medium leading-normal">Overall Return</p>
+<p class="text-[var(--text-primary)] text-3xl font-bold leading-tight">+15.00%</p>
+<p class="text-[var(--text-secondary)] text-xs font-normal leading-normal">Since inception</p>
+</div>
+</section>
+<section class="flex flex-col gap-4">
+<h2 class="text-[var(--text-primary)] text-2xl font-bold leading-tight tracking-[-0.015em]">Holdings</h2>
+<div class="@container">
+<div class="overflow-x-auto rounded-xl border border-[var(--border-color)] bg-[var(--secondary-color)] shadow-lg">
+<table class="min-w-full">
+<thead class="bg-[#1e2124]">
+<tr>
+<th class="table-header px-6 py-4 text-left text-xs font-medium text-[var(--text-secondary)] uppercase tracking-wider">Stock</th>
+<th class="table-header px-6 py-4 text-left text-xs font-medium text-[var(--text-secondary)] uppercase tracking-wider">Quantity</th>
+<th class="table-header px-6 py-4 text-left text-xs font-medium text-[var(--text-secondary)] uppercase tracking-wider">Avg. Cost</th>
+<th class="table-header px-6 py-4 text-left text-xs font-medium text-[var(--text-secondary)] uppercase tracking-wider">Current Price</th>
+<th class="table-header px-6 py-4 text-left text-xs font-medium text-[var(--text-secondary)] uppercase tracking-wider">Market Value</th>
+<th class="table-header px-6 py-4 text-left text-xs font-medium text-[var(--text-secondary)] uppercase tracking-wider">Daily Change</th>
+<th class="table-header px-6 py-4 text-left text-xs font-medium text-[var(--text-secondary)] uppercase tracking-wider">Overall Return</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[var(--border-color)]">
+<tr class="hover:bg-[#23272b] transition-colors">
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm font-medium text-[var(--text-primary)]">TechCorp (TCORP)</td>
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">10</td>
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">$100.00</td>
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">$120.00</td>
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">$1,200.00</td>
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm text-[var(--success-color)]">+$20.00 (+1.69%)</td>
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm text-[var(--success-color)]">+20.00%</td>
+</tr>
+<tr class="hover:bg-[#23272b] transition-colors">
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm font-medium text-[var(--text-primary)]">HealthInc (HLTH)</td>
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">5</td>
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">$200.00</td>
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">$210.00</td>
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">$1,050.00</td>
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm text-[var(--success-color)]">+$10.00 (+0.48%)</td>
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm text-[var(--success-color)]">+5.00%</td>
+</tr>
+<tr class="hover:bg-[#23272b] transition-colors">
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm font-medium text-[var(--text-primary)]">FinServ (FSVC)</td>
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">8</td>
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">$150.00</td>
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">$140.00</td>
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">$1,120.00</td>
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm text-[var(--danger-color)]">-$10.00 (-0.88%)</td>
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm text-[var(--danger-color)]">-6.67%</td>
+</tr>
+<tr class="hover:bg-[#23272b] transition-colors">
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm font-medium text-[var(--text-primary)]">RetailCo (RTLC)</td>
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">12</td>
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">$80.00</td>
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">$90.00</td>
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">$1,080.00</td>
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm text-[var(--success-color)]">+$10.00 (+0.93%)</td>
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm text-[var(--success-color)]">+12.50%</td>
+</tr>
+<tr class="hover:bg-[#23272b] transition-colors">
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm font-medium text-[var(--text-primary)]">EnergyLtd (ENRG)</td>
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">7</td>
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">$110.00</td>
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">$105.00</td>
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">$735.00</td>
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm text-[var(--danger-color)]">-$5.00 (-0.67%)</td>
+<td class="table-cell px-6 py-4 whitespace-nowrap text-sm text-[var(--danger-color)]">-4.55%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<style>
+                    .table-header { display: table-cell; }
+                    .table-cell { display: table-cell; }
+                    @container (max-width: 840px) {
+                      .table-header:nth-child(7), .table-cell:nth-child(7) { display: none; }}
+                    @container (max-width: 720px) {
+                       .table-header:nth-child(6), .table-cell:nth-child(6) { display: none; }}
+                    @container (max-width: 600px) {
+                      .table-header:nth-child(5), .table-cell:nth-child(5) { display: none; }}
+                    @container (max-width: 480px) {
+                       .table-header:nth-child(4), .table-cell:nth-child(4) { display: none; }}
+                    @container (max-width: 360px) {
+                        .table-header:nth-child(3), .table-cell:nth-child(3) { display: none; }.table-header:nth-child(1), .table-cell:nth-child(1) { padding-left: 1rem; padding-right: 1rem; }.table-header:nth-child(2), .table-cell:nth-child(2) { padding-left: 1rem; padding-right: 1rem; }}
+                     @container (max-width: 240px) {
+                        .table-header:nth-child(2), .table-cell:nth-child(2) { display: none; }}
+                </style>
+</div>
+</section>
+<section class="flex flex-col gap-4 bg-[var(--secondary-color)] p-6 rounded-xl shadow-lg">
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+<div>
+<h2 class="text-[var(--text-primary)] text-2xl font-bold leading-tight tracking-[-0.015em]">Performance Chart</h2>
+<p class="text-[var(--text-secondary)] text-sm">Portfolio Value Over Time</p>
+</div>
+<div class="mt-2 sm:mt-0 flex gap-2">
+<button class="text-xs px-3 py-1 rounded-md bg-[#2c3035] text-[var(--text-secondary)] hover:bg-[#3a3f44] hover:text-[var(--primary-color)] transition-colors">1M</button>
+<button class="text-xs px-3 py-1 rounded-md bg-[var(--accent-color)] text-white transition-colors">3M</button>
+<button class="text-xs px-3 py-1 rounded-md bg-[#2c3035] text-[var(--text-secondary)] hover:bg-[#3a3f44] hover:text-[var(--primary-color)] transition-colors">6M</button>
+<button class="text-xs px-3 py-1 rounded-md bg-[#2c3035] text-[var(--text-secondary)] hover:bg-[#3a3f44] hover:text-[var(--primary-color)] transition-colors">1Y</button>
+<button class="text-xs px-3 py-1 rounded-md bg-[#2c3035] text-[var(--text-secondary)] hover:bg-[#3a3f44] hover:text-[var(--primary-color)] transition-colors">All</button>
+</div>
+</div>
+<div class="flex flex-col gap-1 mt-2">
+<p class="text-[var(--text-primary)] text-3xl font-bold leading-tight">$12,500.00</p>
+<div class="flex items-center gap-1 text-[var(--success-color)] text-sm font-medium">
+<span class="material-icons text-base">arrow_upward</span>
+<span>+15.00% (Last 3 Months)</span>
+</div>
+</div>
+<div class="flex min-h-[250px] flex-1 flex-col gap-4 py-4">
+<svg fill="none" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 472 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H0V109Z" fill="url(#chartGradient)"></path>
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="var(--accent-color)" stroke-linecap="round" stroke-width="3"></path>
+<defs>
+<linearGradient gradientUnits="userSpaceOnUse" id="chartGradient" x1="236" x2="236" y1="1" y2="149">
+<stop stop-color="var(--accent-color)" stop-opacity="0.3"></stop>
+<stop offset="1" stop-color="var(--accent-color)" stop-opacity="0"></stop>
+</linearGradient>
+</defs>
+</svg>
+<div class="flex justify-between -mt-2">
+<p class="text-[var(--text-secondary)] text-xs font-medium">Jan</p>
+<p class="text-[var(--text-secondary)] text-xs font-medium">Feb</p>
+<p class="text-[var(--text-secondary)] text-xs font-medium">Mar</p>
+<p class="text-[var(--text-secondary)] text-xs font-medium">Apr</p>
+<p class="text-[var(--text-secondary)] text-xs font-medium">May</p>
+<p class="text-[var(--text-secondary)] text-xs font-medium">Jun</p>
+</div>
+</div>
+</section>
+</div>
+</main>
+<footer class="text-center py-6 border-t border-[var(--border-color)]">
+<p class="text-sm text-[var(--text-secondary)]">© 2024 StockUp. All rights reserved.</p>
+</footer>
+</div>
+</div>
+
+</body></html>
