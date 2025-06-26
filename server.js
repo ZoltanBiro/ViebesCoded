@@ -34,6 +34,10 @@ app.get('/',function(req,res){
     res.sendFile(__dirname+'/home.html')
 });
 
+app.get('/projects',function(req,res){
+    res.sendFile(__dirname+'/projects.html')
+});
+
 // ---- post requests -------------------------------
 
 app.post('/addPrompt', function(req,res){

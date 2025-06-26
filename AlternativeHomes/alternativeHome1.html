@@ -1,0 +1,269 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link as="style"
+        href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40300%3B400%3B500%3B600%3B700&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700"
+        onload="this.rel='stylesheet'" rel="stylesheet" />
+    <style type="text/tailwindcss">
+        :root {
+        --primary-color: #0077FF; 
+        --secondary-color: #111827;--accent-color: #10B981;
+        --text-primary: #F3F4F6;--text-secondary: #9CA3AF;--border-color: #374151;--card-bg: #1F2937;}
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--secondary-color);
+        color: var(--text-primary);
+      }
+      .abstract-shape {
+        position: absolute;
+        opacity: 0.05;pointer-events: none;
+        z-index: 0;
+      }
+      .shape-1 {
+        width: 300px;
+        height: 300px;
+        top: 10%;
+        left: 5%;
+        background-color: var(--primary-color);
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        animation: morph 15s infinite alternate;
+      }
+      .shape-2 {
+        width: 200px;
+        height: 200px;
+        bottom: 15%;
+        right: 10%;
+        background-color: var(--accent-color);
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        animation: morph 12s infinite alternate-reverse;
+      }
+      @keyframes morph {
+        0% {
+          border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+          transform: rotate(0deg) scale(1);
+        }
+        100% {
+          border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+          transform: rotate(45deg) scale(1.1);
+        }
+      }
+    </style>
+    <title>Alex Portfolio - Dark Theme</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+
+<body class="bg-[var(--secondary-color)] text-[var(--text-primary)]">
+    <div class="abstract-shape shape-1"></div>
+    <div class="abstract-shape shape-2"></div>
+    <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden z-10"
+        style='font-family: "Inter", "Noto Sans", sans-serif;'>
+        <div class="layout-container flex h-full grow flex-col">
+            <header
+                class="flex items-center justify-between whitespace-nowrap px-6 sm:px-10 md:px-16 lg:px-24 py-6 sticky top-0 z-50 bg-[var(--secondary-color)]/80 backdrop-blur-md border-b border-[var(--border-color)]">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-8 h-8 bg-[var(--primary-color)] rounded-full flex items-center justify-center text-white font-bold text-lg">
+                        A</div>
+                    <h2 class="text-[var(--text-primary)] text-xl font-semibold leading-tight tracking-tight">Alex Chen
+                    </h2>
+                </div>
+                <nav class="hidden md:flex flex-1 justify-end items-center gap-6 lg:gap-8">
+                    <a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors"
+                        href="#">About</a>
+                    <a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors"
+                        href="#">Projects</a>
+                    <a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors"
+                        href="#">Blog</a>
+                    <a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors"
+                        href="#">Contact</a>
+                    <button
+                        class="flex min-w-[90px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-9 px-4 bg-[var(--primary-color)] hover:bg-opacity-80 text-white text-sm font-medium leading-normal tracking-wide transition-all duration-300">
+                        <span class="truncate">Resume</span>
+                    </button>
+                </nav>
+                <div class="md:hidden">
+                    <button class="text-[var(--text-primary)] focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2"></path>
+                        </svg>
+                    </button>
+                </div>
+            </header>
+            <main class="px-6 sm:px-10 md:px-16 lg:px-24 flex flex-1 justify-center py-16 md:py-24 lg:py-32">
+                <div class="layout-content-container flex flex-col max-w-4xl flex-1 gap-16 md:gap-24 lg:gap-32">
+                    <section
+                        class="grid grid-cols-1 md:grid-cols-5 items-center gap-10 md:gap-16 text-center md:text-left">
+                        <div class="md:col-span-3 flex flex-col gap-5">
+                            <h1
+                                class="text-[var(--text-primary)] text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tighter">
+                                Alex Chen
+                            </h1>
+                            <p class="text-[var(--text-secondary)] text-lg sm:text-xl font-normal leading-relaxed">
+                                Computer Science Student. Building secure and innovative digital experiences. Passionate
+                                about <strong class="text-[var(--primary-color)] font-medium">cybersecurity</strong> and
+                                the future of technology.
+                            </p>
+                            <div class="mt-4 flex gap-4 justify-center md:justify-start">
+                                <button
+                                    class="flex min-w-[120px] items-center justify-center overflow-hidden rounded-md h-11 px-6 bg-[var(--primary-color)] hover:bg-opacity-80 text-white text-base font-medium leading-normal tracking-wide transition-all duration-300">
+                                    <span class="truncate">My Work</span>
+                                </button>
+                                <button
+                                    class="flex min-w-[120px] items-center justify-center overflow-hidden rounded-md h-11 px-6 border border-[var(--primary-color)] text-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:text-white text-base font-medium leading-normal tracking-wide transition-all duration-300">
+                                    <span class="truncate">Let's Talk</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="md:col-span-2 flex justify-center md:justify-end">
+                            <div
+                                class="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden shrink-0 border-4 border-[var(--card-bg)] shadow-xl relative">
+                                <img alt="Alex - Computer Science Student" class="w-full h-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKWWlHZNI4NN8zAObSSR5rt0xlZD01HLxfrUSFW5XhD0G_hyZPLKSDWlPMyiASLF9XTZkNS7GO0rmtAwywaZ9X-eZHllpllbdPKu0_NHaV04chwJXFk0H6PZEcEWtlPcI76rpjPOzipI7OEzSEgy8HeF3ws-8vjW6KVhrw_1C3fQN5w7UDetdRcCXT2ZvuwU_Rzktw04z5jeZrM66lFEnN4Ol1FQEWwDBiLeLHiHMEjcascz7SCrtQBF1EjjpmReebtWBFOrG2BVzi" />
+                                <div class="absolute inset-0 bg-[var(--primary-color)] opacity-20 mix-blend-overlay">
+                                </div> {}
+                            </div>
+                        </div>
+                    </section>
+                    <section class="space-y-10 md:space-y-16">
+                        <div class="text-center">
+                            <h2
+                                class="text-[var(--text-primary)] text-3xl md:text-4xl font-semibold leading-tight tracking-tight">
+                                Core Competencies</h2>
+                            <p class="text-[var(--text-secondary)] text-base md:text-lg mt-3 max-w-2xl mx-auto">A blend
+                                of technical expertise and creative problem-solving to build robust and secure systems.
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                            <div
+                                class="flex flex-col gap-3 p-6 rounded-lg border border-[var(--border-color)] hover:border-[var(--primary-color)]/70 hover:shadow-lg transition-all duration-300 ease-in-out bg-[var(--card-bg)]/80 backdrop-blur-sm">
+                                <div
+                                    class="p-2.5 rounded-md bg-[var(--primary-color)]/20 text-[var(--primary-color)] self-start mb-2">
+                                    {}
+                                    <svg class="lucide lucide-shield-check" fill="none" height="28"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" viewBox="0 0 24 24" width="28"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
+                                        <path d="m9 12 2 2 4-4"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-[var(--text-primary)] text-lg font-semibold leading-tight">Cybersecurity
+                                </h3>
+                                <p class="text-[var(--text-secondary)] text-sm leading-relaxed">Threat detection,
+                                    vulnerability assessment, secure architecture.</p>
+                            </div>
+                            <div
+                                class="flex flex-col gap-3 p-6 rounded-lg border border-[var(--border-color)] hover:border-[var(--primary-color)]/70 hover:shadow-lg transition-all duration-300 ease-in-out bg-[var(--card-bg)]/80 backdrop-blur-sm">
+                                <div
+                                    class="p-2.5 rounded-md bg-[var(--primary-color)]/20 text-[var(--primary-color)] self-start mb-2">
+                                    {}
+                                    <svg class="lucide lucide-code-2" fill="none" height="28" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        viewBox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="m18 16 4-4-4-4"></path>
+                                        <path d="m6 8-4 4 4 4"></path>
+                                        <path d="m14.5 4-5 16"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-[var(--text-primary)] text-lg font-semibold leading-tight">Software
+                                    Development</h3>
+                                <p class="text-[var(--text-secondary)] text-sm leading-relaxed">Python, Java, C++, Web
+                                    Technologies (React, Node.js).</p>
+                            </div>
+                            <div
+                                class="flex flex-col gap-3 p-6 rounded-lg border border-[var(--border-color)] hover:border-[var(--primary-color)]/70 hover:shadow-lg transition-all duration-300 ease-in-out bg-[var(--card-bg)]/80 backdrop-blur-sm">
+                                <div
+                                    class="p-2.5 rounded-md bg-[var(--primary-color)]/20 text-[var(--primary-color)] self-start mb-2">
+                                    {}
+                                    <svg class="lucide lucide-server" fill="none" height="28" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        viewBox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg">
+                                        <rect height="8" rx="2" ry="2" width="20" x="2" y="2"></rect>
+                                        <rect height="8" rx="2" ry="2" width="20" x="2" y="14"></rect>
+                                        <line x1="6" x2="6.01" y1="6" y2="6"></line>
+                                        <line x1="6" x2="6.01" y1="18" y2="18"></line>
+                                    </svg>
+                                </div>
+                                <h3 class="text-[var(--text-primary)] text-lg font-semibold leading-tight">Network &amp;
+                                    Cloud</h3>
+                                <p class="text-[var(--text-secondary)] text-sm leading-relaxed">AWS, Azure, Docker,
+                                    Kubernetes, Secure Network Design.</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="space-y-10 md:space-y-16">
+                        <div class="text-center">
+                            <h2
+                                class="text-[var(--text-primary)] text-3xl md:text-4xl font-semibold leading-tight tracking-tight">
+                                Insights &amp; Ideas</h2>
+                            <p class="text-[var(--text-secondary)] text-base md:text-lg mt-3 max-w-2xl mx-auto">Sharing
+                                thoughts on technology, security, and the digital landscape.</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                            <div
+                                class="p-6 rounded-lg border border-[var(--border-color)] flex flex-col gap-4 hover:border-[var(--primary-color)]/70 hover:shadow-lg transition-all duration-300 ease-in-out bg-[var(--card-bg)]/80 backdrop-blur-sm">
+                                <div>
+                                    <p
+                                        class="text-xs font-medium leading-normal text-[var(--accent-color)] uppercase tracking-wider">
+                                        Latest Thoughts</p> {}
+                                    <h3 class="text-[var(--text-primary)] text-xl font-semibold leading-tight mt-1.5">
+                                        The Evolving Threat Landscape in AI</h3>
+                                    <p class="text-[var(--text-secondary)] text-sm font-normal leading-relaxed mt-2">
+                                        Exploring new security challenges and opportunities presented by advancements in
+                                        Artificial Intelligence.</p>
+                                </div>
+                                <a class="inline-flex items-center text-sm font-medium text-[var(--primary-color)] hover:text-opacity-80 transition-colors self-start group"
+                                    href="#">
+                                    Read Article
+                                    <svg class="lucide lucide-arrow-right ml-1.5 w-4 h-4 group-hover:translate-x-1 transition-transform"
+                                        fill="none" height="16" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12h14"></path>
+                                        <path d="m12 5 7 7-7 7"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div
+                                class="p-6 rounded-lg border border-[var(--border-color)] flex flex-col gap-4 hover:border-[var(--primary-color)]/70 hover:shadow-lg transition-all duration-300 ease-in-out bg-[var(--card-bg)]/80 backdrop-blur-sm">
+                                <div>
+                                    <p
+                                        class="text-xs font-medium leading-normal text-[var(--accent-color)] uppercase tracking-wider">
+                                        Featured Insight</p> {}
+                                    <h3 class="text-[var(--text-primary)] text-xl font-semibold leading-tight mt-1.5">
+                                        Building Resilient Systems with Zero Trust</h3>
+                                    <p class="text-[var(--text-secondary)] text-sm font-normal leading-relaxed mt-2">A
+                                        look into the principles of Zero Trust architecture and its practical
+                                        implementation for enhanced security.</p>
+                                </div>
+                                <a class="inline-flex items-center text-sm font-medium text-[var(--primary-color)] hover:text-opacity-80 transition-colors self-start group"
+                                    href="#">
+                                    Read Article
+                                    <svg class="lucide lucide-arrow-right ml-1.5 w-4 h-4 group-hover:translate-x-1 transition-transform"
+                                        fill="none" height="16" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12h14"></path>
+                                        <path d="m12 5 7 7-7 7"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+            <footer
+                class="border-t border-solid border-[var(--border-color)] px-6 sm:px-10 md:px-16 lg:px-24 py-8 text-center bg-[var(--secondary-color)]/50">
+                <p class="text-[var(--text-secondary)] text-sm">© 2024 Alex Chen. All rights reserved.</p>
+                <p class="text-gray-500 text-xs mt-1">Designed with minimalism &amp; focus.</p> {}
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
