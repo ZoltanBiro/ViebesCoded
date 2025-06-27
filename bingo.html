@@ -42,6 +42,7 @@
         @apply text-[var(--text-primary)] hover:text-[var(--accent-color)] transition-colors duration-200;
       }
     </style>
+    <script src="index.js"></script>
 </head>
 
 <body class="bg-[var(--dark-bg)] text-[var(--text-primary)]"
@@ -90,6 +91,7 @@
             <label class="flex flex-col w-full">
               <p class="text-[var(--text-primary)] text-sm font-medium leading-normal pb-2">Enter yo prompt here:</p>
               <textarea
+                id="input"
                 class="form-textarea flex w-full min-w-0 flex-1 resize-y overflow-hidden rounded-lg text-[var(--text-primary)] focus:outline-0 focus:ring-2 focus:ring-[var(--accent-color)] border border-[var(--border-color)] bg-[var(--dark-bg)] focus:border-[var(--accent-color)] min-h-24 placeholder:text-[var(--text-secondary)] p-3 sm:p-4 text-sm sm:text-base font-normal leading-normal"
                 placeholder="e.g, Instant song skip request, Mean-ish joke about an absent member"
                 rows="4"></textarea>
