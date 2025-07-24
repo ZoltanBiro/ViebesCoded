@@ -42,7 +42,7 @@
         @apply text-[var(--text-primary)] hover:text-[var(--accent-color)] transition-colors duration-200;
       }
     </style>
-    <script src="index.js"></script>
+    <script src="/js/bingo.js"></script>
 </head>
 
 <body class="bg-[var(--dark-bg)] text-[var(--text-primary)]"
@@ -97,6 +97,7 @@
                 rows="4"></textarea>
             </label>
             <button
+              onclick="submit();"
               class="mt-4 sm:mt-6 w-full flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-[var(--accent-color)] hover:bg-opacity-80 transition-colors duration-200 text-white text-base font-semibold leading-normal tracking-wide">
               <span class="truncate">Submit</span>
               <span class="material-icons ml-2">arrow_outward</span>

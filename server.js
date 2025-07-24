@@ -4,8 +4,14 @@ const http = require('http');
 const https = require('https');
 const express = require('express');
 const router = express.Router();
+const morgan = require('morgan'); 
+	
+
+//router js files
+const bingoRouter = require('./routes/bingo/bingoRouter.js');
 
 const app = express();
+app.use(morgan('tiny'));//request logger middleware
 
 // // Certificate --- only if you have a cert lol
 // const privateKey = fs.readFileSync('C:/Certbot/live/zoltanbiro.ca/privkey.pem', 'utf8'); //path to the privkey.pem
@@ -21,10 +27,14 @@ const credentials=null;
 
 
 app.use(express.json());
+
+app.use('/',express.static(__dirname+'/public')); //static requests to get easy stuff
+
 //app.use(requireHTTPS);
-app.use(express.static('.')); //static requests to get easy stuff
+
 
 // // ------ routes ------------
+app.use('/bingo', bingoRouter);  // Use the /about router
 // app.use('/about', aboutRoutes);  // Use the /about router
 // app.use('/users', usersRoutes);  // Use the /users router
 
