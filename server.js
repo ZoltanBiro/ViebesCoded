@@ -48,17 +48,27 @@ app.get('/projects',function(req,res){
     res.sendFile(__dirname+'/projects.html')
 });
 
-// ---- post requests -------------------------------
-
-app.post('/addPrompt', function(req,res){
-	fs.appendFile('./prompts.txt','\n'+req.body.value, (err)=>{
-		if (err){
-			console.log("error append word to file.");
-		}else{
-			console.log(req.body.value+" added to file");
-		}
-	});
+app.get('/blog',function(req,res){
+    res.sendFile(__dirname+'/blog.html')
 });
+
+app.get('/tools',function(req,res){
+    res.sendFile(__dirname+'/tools.html')
+});
+
+
+// ---- post requests -------------------------------
+	// in theory, nothing should be posting to this 
+
+// app.post('/addPrompt', function(req,res){
+// 	fs.appendFile('./prompts.txt','\n'+req.body.value, (err)=>{
+// 		if (err){
+// 			console.log("error append word to file.");
+// 		}else{
+// 			console.log(req.body.value+" added to file");
+// 		}
+// 	});
+// });
 
 
 

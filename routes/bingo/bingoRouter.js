@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
 
 });
 
-app.post('/addPrompt', function(req,res){
+router.post('/addPrompt', function(req,res){
   fs.appendFile('./prompts.txt','\n'+req.body.value, (err)=>{
     if (err){
       console.log("error append word to file.");
