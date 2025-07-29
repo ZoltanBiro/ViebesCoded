@@ -5,9 +5,9 @@ function submit(){
     
     if(prompt.length > 2){
         let xhttp = new XMLHttpRequest();
-        xhttp.open("POST", "http://localhost:3000/bingo/addPrompt"); //fix me
+        xhttp.open("POST", "https://zoltanb.duckdns.org/bingo/addPrompt"); //fix me
         xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xhttp.send(JSON.stringify({value:prompt}));
-    } 
+    }
 
 }

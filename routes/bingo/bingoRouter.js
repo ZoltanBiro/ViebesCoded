@@ -21,6 +21,4 @@ router.post('/addPrompt', function(req,res){
   });
 });
 
-
-
 module.exports = router;
