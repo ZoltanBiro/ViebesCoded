@@ -84,7 +84,7 @@
               Submit a Bingo Prompt
             </h1>
             <p class="text-base sm:text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
-              Make sure it's an obtainable measurable event that we can agree that happened. Also, I will be editing and weeding out lame shit
+              Make sure it's an obtainable measurable event that we can agree that happened. Also, I will be editing and weeding out anything lame
             </p>
           </div>
           <div class="bg-[var(--card-bg)] p-6 sm:p-8 rounded-xl shadow-xl mb-8 sm:mb-12" style="margin-bottom: 1rem; padding: 1.5rem;">
@@ -103,15 +103,17 @@
               <span class="material-icons ml-2">arrow_outward</span>
             </button>
           </div>
-<!-- 
+
           <label for="userInput">Your Name: </label>
-          <input name="userInput" type="text" class="form-textarea flex w-full min-w-0 flex-1 resize-y overflow-hidden rounded-lg text-[var(--text-primary)] focus:outline-0 focus:ring-2 focus:ring-[var(--accent-color)] border border-[var(--border-color)] bg-[var(--card-bg)] focus:border-[var(--accent-color)]  placeholder:text-[var(--text-secondary)] p-3 sm:p-4 text-sm sm:text-base font-normal leading-normal"> 
-          -->
+          <input id="userInput" type="text" style="max-height: 3em;" class="form-textarea flex w-full min-w-0 flex-1 resize-y overflow-hidden rounded-lg text-[var(--text-primary)] focus:outline-0 focus:ring-2 focus:ring-[var(--accent-color)] border border-[var(--border-color)] bg-[var(--card-bg)] focus:border-[var(--accent-color)]  placeholder:text-[var(--text-secondary)] p-3 sm:p-4 text-sm sm:text-base font-normal leading-normal"> 
+         
 
           <div id="toUserCard" style="display: flex; flex-direction: row; justify-content: flex-end;">
             <p style="align-self:center; margin: 0.5rem;">test alert thing</p>
 
             <button
+              onclick="myCard();"
+
               class="mt-4 sm:mt-6 w-full flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-[var(--accent-color)] hover:bg-opacity-80 transition-colors duration-200 text-white text-base font-semibold leading-normal tracking-wide"
                 style="width: 30%; align-self:flex-end; margin-right: 1%; margin-bottom: 3%;">
               <span class="truncate">My card</span>
